@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAA61CFF1BF921A0001C450E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61CFE1BF921A0001C450E /* main.m */; };
+		FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D011BF921A0001C450E /* AppDelegate.m */; };
+		FAA61D051BF921A0001C450E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D041BF921A0001C450E /* ViewController.m */; };
+		FAA61D081BF921A0001C450E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA61D061BF921A0001C450E /* Main.storyboard */; };
+		FAA61D0A1BF921A0001C450E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA61D091BF921A0001C450E /* Assets.xcassets */; };
+		FAA61D0D1BF921A0001C450E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA61D0B1BF921A0001C450E /* LaunchScreen.storyboard */; };
+		FAA61D181BF921A0001C450E /* UmmAlQuraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D171BF921A0001C450E /* UmmAlQuraTests.m */; };
+		FAA61D231BF921A0001C450E /* UmmAlQuraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D221BF921A0001C450E /* UmmAlQuraUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAA61D141BF921A0001C450E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA61CF21BF921A0001C450E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA61CF91BF921A0001C450E;
+			remoteInfo = UmmAlQura;
+		};
+		FAA61D1F1BF921A0001C450E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA61CF21BF921A0001C450E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA61CF91BF921A0001C450E;
+			remoteInfo = UmmAlQura;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FAA61CFA1BF921A0001C450E /* UmmAlQura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmmAlQura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA61CFE1BF921A0001C450E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAA61D001BF921A0001C450E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAA61D011BF921A0001C450E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAA61D031BF921A0001C450E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAA61D041BF921A0001C450E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAA61D071BF921A0001C450E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAA61D091BF921A0001C450E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA61D0C1BF921A0001C450E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAA61D0E1BF921A0001C450E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA61D131BF921A0001C450E /* UmmAlQuraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmmAlQuraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA61D171BF921A0001C450E /* UmmAlQuraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UmmAlQuraTests.m; sourceTree = "<group>"; };
+		FAA61D191BF921A0001C450E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA61D1E1BF921A0001C450E /* UmmAlQuraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmmAlQuraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA61D221BF921A0001C450E /* UmmAlQuraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UmmAlQuraUITests.m; sourceTree = "<group>"; };
+		FAA61D241BF921A0001C450E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA61CF71BF921A0001C450E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA61D101BF921A0001C450E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA61D1B1BF921A0001C450E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAA61CF11BF921A0001C450E = {
+			isa = PBXGroup;
+			children = (
+				FAA61CFC1BF921A0001C450E /* UmmAlQura */,
+				FAA61D161BF921A0001C450E /* UmmAlQuraTests */,
+				FAA61D211BF921A0001C450E /* UmmAlQuraUITests */,
+				FAA61CFB1BF921A0001C450E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAA61CFB1BF921A0001C450E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA61CFA1BF921A0001C450E /* UmmAlQura.app */,
+				FAA61D131BF921A0001C450E /* UmmAlQuraTests.xctest */,
+				FAA61D1E1BF921A0001C450E /* UmmAlQuraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAA61CFC1BF921A0001C450E /* UmmAlQura */ = {
+			isa = PBXGroup;
+			children = (
+				FAA61D001BF921A0001C450E /* AppDelegate.h */,
+				FAA61D011BF921A0001C450E /* AppDelegate.m */,
+				FAA61D031BF921A0001C450E /* ViewController.h */,
+				FAA61D041BF921A0001C450E /* ViewController.m */,
+				FAA61D061BF921A0001C450E /* Main.storyboard */,
+				FAA61D091BF921A0001C450E /* Assets.xcassets */,
+				FAA61D0B1BF921A0001C450E /* LaunchScreen.storyboard */,
+				FAA61D0E1BF921A0001C450E /* Info.plist */,
+				FAA61CFD1BF921A0001C450E /* Supporting Files */,
+			);
+			path = UmmAlQura;
+			sourceTree = "<group>";
+		};
+		FAA61CFD1BF921A0001C450E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAA61CFE1BF921A0001C450E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAA61D161BF921A0001C450E /* UmmAlQuraTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAA61D171BF921A0001C450E /* UmmAlQuraTests.m */,
+				FAA61D191BF921A0001C450E /* Info.plist */,
+			);
+			path = UmmAlQuraTests;
+			sourceTree = "<group>";
+		};
+		FAA61D211BF921A0001C450E /* UmmAlQuraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAA61D221BF921A0001C450E /* UmmAlQuraUITests.m */,
+				FAA61D241BF921A0001C450E /* Info.plist */,
+			);
+			path = UmmAlQuraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAA61CF91BF921A0001C450E /* UmmAlQura */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA61D271BF921A0001C450E /* Build configuration list for PBXNativeTarget "UmmAlQura" */;
+			buildPhases = (
+				FAA61CF61BF921A0001C450E /* Sources */,
+				FAA61CF71BF921A0001C450E /* Frameworks */,
+				FAA61CF81BF921A0001C450E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UmmAlQura;
+			productName = UmmAlQura;
+			productReference = FAA61CFA1BF921A0001C450E /* UmmAlQura.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAA61D121BF921A0001C450E /* UmmAlQuraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA61D2A1BF921A0001C450E /* Build configuration list for PBXNativeTarget "UmmAlQuraTests" */;
+			buildPhases = (
+				FAA61D0F1BF921A0001C450E /* Sources */,
+				FAA61D101BF921A0001C450E /* Frameworks */,
+				FAA61D111BF921A0001C450E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAA61D151BF921A0001C450E /* PBXTargetDependency */,
+			);
+			name = UmmAlQuraTests;
+			productName = UmmAlQuraTests;
+			productReference = FAA61D131BF921A0001C450E /* UmmAlQuraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAA61D1D1BF921A0001C450E /* UmmAlQuraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA61D2D1BF921A0001C450E /* Build configuration list for PBXNativeTarget "UmmAlQuraUITests" */;
+			buildPhases = (
+				FAA61D1A1BF921A0001C450E /* Sources */,
+				FAA61D1B1BF921A0001C450E /* Frameworks */,
+				FAA61D1C1BF921A0001C450E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAA61D201BF921A0001C450E /* PBXTargetDependency */,
+			);
+			name = UmmAlQuraUITests;
+			productName = UmmAlQuraUITests;
+			productReference = FAA61D1E1BF921A0001C450E /* UmmAlQuraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA61CF21BF921A0001C450E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = KACST;
+				TargetAttributes = {
+					FAA61CF91BF921A0001C450E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					FAA61D121BF921A0001C450E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = FAA61CF91BF921A0001C450E;
+					};
+					FAA61D1D1BF921A0001C450E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = FAA61CF91BF921A0001C450E;
+					};
+				};
+			};
+			buildConfigurationList = FAA61CF51BF921A0001C450E /* Build configuration list for PBXProject "UmmAlQura" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAA61CF11BF921A0001C450E;
+			productRefGroup = FAA61CFB1BF921A0001C450E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAA61CF91BF921A0001C450E /* UmmAlQura */,
+				FAA61D121BF921A0001C450E /* UmmAlQuraTests */,
+				FAA61D1D1BF921A0001C450E /* UmmAlQuraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAA61CF81BF921A0001C450E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA61D0D1BF921A0001C450E /* LaunchScreen.storyboard in Resources */,
+				FAA61D0A1BF921A0001C450E /* Assets.xcassets in Resources */,
+				FAA61D081BF921A0001C450E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA61D111BF921A0001C450E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA61D1C1BF921A0001C450E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA61CF61BF921A0001C450E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA61D051BF921A0001C450E /* ViewController.m in Sources */,
+				FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */,
+				FAA61CFF1BF921A0001C450E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA61D0F1BF921A0001C450E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA61D181BF921A0001C450E /* UmmAlQuraTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA61D1A1BF921A0001C450E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA61D231BF921A0001C450E /* UmmAlQuraUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAA61D151BF921A0001C450E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA61CF91BF921A0001C450E /* UmmAlQura */;
+			targetProxy = FAA61D141BF921A0001C450E /* PBXContainerItemProxy */;
+		};
+		FAA61D201BF921A0001C450E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA61CF91BF921A0001C450E /* UmmAlQura */;
+			targetProxy = FAA61D1F1BF921A0001C450E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAA61D061BF921A0001C450E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA61D071BF921A0001C450E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA61D0B1BF921A0001C450E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA61D0C1BF921A0001C450E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAA61D251BF921A0001C450E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAA61D261BF921A0001C450E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAA61D281BF921A0001C450E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UmmAlQura/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sa.edu.kacst.UmmAlQura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAA61D291BF921A0001C450E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UmmAlQura/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sa.edu.kacst.UmmAlQura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FAA61D2B1BF921A0001C450E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UmmAlQuraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sa.edu.kacst.UmmAlQuraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UmmAlQura.app/UmmAlQura";
+			};
+			name = Debug;
+		};
+		FAA61D2C1BF921A0001C450E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UmmAlQuraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sa.edu.kacst.UmmAlQuraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UmmAlQura.app/UmmAlQura";
+			};
+			name = Release;
+		};
+		FAA61D2E1BF921A0001C450E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UmmAlQuraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sa.edu.kacst.UmmAlQuraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UmmAlQura;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FAA61D2F1BF921A0001C450E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UmmAlQuraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sa.edu.kacst.UmmAlQuraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UmmAlQura;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA61CF51BF921A0001C450E /* Build configuration list for PBXProject "UmmAlQura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA61D251BF921A0001C450E /* Debug */,
+				FAA61D261BF921A0001C450E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA61D271BF921A0001C450E /* Build configuration list for PBXNativeTarget "UmmAlQura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA61D281BF921A0001C450E /* Debug */,
+				FAA61D291BF921A0001C450E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FAA61D2A1BF921A0001C450E /* Build configuration list for PBXNativeTarget "UmmAlQuraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA61D2B1BF921A0001C450E /* Debug */,
+				FAA61D2C1BF921A0001C450E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FAA61D2D1BF921A0001C450E /* Build configuration list for PBXNativeTarget "UmmAlQuraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA61D2E1BF921A0001C450E /* Debug */,
+				FAA61D2F1BF921A0001C450E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAA61CF21BF921A0001C450E /* Project object */;
+}
