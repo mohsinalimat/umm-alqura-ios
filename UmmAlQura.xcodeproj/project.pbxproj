@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5D6B151C026C24006CD077 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D6B141C026C24006CD077 /* TestVC.m */; };
 		FAA61CFF1BF921A0001C450E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61CFE1BF921A0001C450E /* main.m */; };
 		FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D011BF921A0001C450E /* AppDelegate.m */; };
 		FAA61D051BF921A0001C450E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D041BF921A0001C450E /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA5D6B131C026C24006CD077 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		FA5D6B141C026C24006CD077 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		FAA61CFA1BF921A0001C450E /* UmmAlQura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmmAlQura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA61CFE1BF921A0001C450E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAA61D001BF921A0001C450E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				FAA61D0B1BF921A0001C450E /* LaunchScreen.storyboard */,
 				FAA61D0E1BF921A0001C450E /* Info.plist */,
 				FAA61CFD1BF921A0001C450E /* Supporting Files */,
+				FA5D6B131C026C24006CD077 /* TestVC.h */,
+				FA5D6B141C026C24006CD077 /* TestVC.m */,
 			);
 			path = UmmAlQura;
 			sourceTree = "<group>";
@@ -202,11 +207,15 @@
 		FAA61CF21BF921A0001C450E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					3,
+				);
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = KACST;
 				TargetAttributes = {
 					FAA61CF91BF921A0001C450E = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 328T3E4F4D;
 					};
 					FAA61D121BF921A0001C450E = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -270,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5D6B151C026C24006CD077 /* TestVC.m in Sources */,
 				FAA61D051BF921A0001C450E /* ViewController.m in Sources */,
 				FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */,
 				FAA61CFF1BF921A0001C450E /* main.m in Sources */,
@@ -411,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = UmmAlQura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sa.edu.kacst.UmmAlQura;
@@ -422,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = UmmAlQura/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sa.edu.kacst.UmmAlQura;
@@ -496,6 +508,7 @@
 				FAA61D291BF921A0001C450E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAA61D2A1BF921A0001C450E /* Build configuration list for PBXNativeTarget "UmmAlQuraTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +517,7 @@
 				FAA61D2C1BF921A0001C450E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAA61D2D1BF921A0001C450E /* Build configuration list for PBXNativeTarget "UmmAlQuraUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +526,7 @@
 				FAA61D2F1BF921A0001C450E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
