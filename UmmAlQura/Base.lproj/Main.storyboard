@@ -222,7 +222,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="236" y="8" width="148" height="62.5"/>
+                                            <rect key="frame" x="236" y="8" width="139" height="63"/>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="٠٥:٣٦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jZ-5f-AFV" userLabel="Fajr Time">
@@ -234,20 +234,45 @@
                                             <rect key="frame" x="173" y="8" width="55" height="62"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q89-Qk-Ho2" userLabel="Fajr Notification">
-                                        <rect key="frame" x="8" y="8" width="257" height="30"/>
-                                        <state key="normal" image="notifications_active"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="8" width="157" height="29.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEL-Fo-fRC" userLabel="Fajr Notification View">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q89-Qk-Ho2" userLabel="Fajr Notification">
+                                                <rect key="frame" x="8" y="8" width="257" height="30"/>
+                                                <state key="normal" image="notifications_active"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="41" y="16" width="32" height="32"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ysi-w0-GHa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="Q89-Qk-Ho2"/>
+                                            </mask>
                                         </variation>
-                                        <connections>
-                                            <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ysi-w0-GHa"/>
-                                        </connections>
-                                    </button>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="8" width="114" height="64"/>
+                                            <mask key="subviews">
+                                                <include reference="Q89-Qk-Ho2"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="LEL-Fo-fRC"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="280.5" width="400" height="78.5"/>
+                                    <mask key="subviews">
+                                        <include reference="LEL-Fo-fRC"/>
+                                    </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sf3-fp-Ux0" userLabel="Time Sunrise View">
@@ -271,20 +296,45 @@
                                             <rect key="frame" x="172" y="8" width="55" height="63"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Td-eI-IY9" userLabel="Sunrise Notification">
-                                        <rect key="frame" x="8" y="8" width="256" height="29"/>
-                                        <state key="normal" image="vibration"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="8" width="156" height="29"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64h-M5-lC4" userLabel="Sunrise Notification View">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Td-eI-IY9" userLabel="Sunrise Notification">
+                                                <rect key="frame" x="8" y="8" width="256" height="29"/>
+                                                <state key="normal" image="vibration"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="45" y="20" width="32" height="32"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOM-Kk-KF9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="4Td-eI-IY9"/>
+                                            </mask>
                                         </variation>
-                                        <connections>
-                                            <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOM-Kk-KF9"/>
-                                        </connections>
-                                    </button>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="4" width="123" height="72"/>
+                                            <mask key="subviews">
+                                                <include reference="4Td-eI-IY9"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82745098039215681" green="1" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="64h-M5-lC4"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="358.5" width="400" height="79"/>
+                                    <mask key="subviews">
+                                        <include reference="64h-M5-lC4"/>
+                                    </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7I8-Dl-pGN" userLabel="Time Dhuhr View">
@@ -308,20 +358,45 @@
                                             <rect key="frame" x="172" y="9" width="55" height="62"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYI-Ne-Am3" userLabel="Dhuhr Notification">
-                                        <rect key="frame" x="8" y="9" width="256" height="29"/>
-                                        <state key="normal" image="notifications_off"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="9" width="156" height="29"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzL-7p-XSt" userLabel="Dhuhr Notification View">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYI-Ne-Am3" userLabel="Dhuhr Notification">
+                                                <rect key="frame" x="8" y="9" width="256" height="29"/>
+                                                <state key="normal" image="notifications_off"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="54" y="20" width="32" height="32"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iga-3W-Ifl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="cYI-Ne-Am3"/>
+                                            </mask>
                                         </variation>
-                                        <connections>
-                                            <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iga-3W-Ifl"/>
-                                        </connections>
-                                    </button>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="8" width="140" height="63"/>
+                                            <mask key="subviews">
+                                                <include reference="cYI-Ne-Am3"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="tzL-7p-XSt"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="437.5" width="400" height="78.5"/>
+                                    <mask key="subviews">
+                                        <include reference="tzL-7p-XSt"/>
+                                    </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RTB-cb-tRO" userLabel="Time Asr View">
@@ -345,20 +420,45 @@
                                             <rect key="frame" x="173" y="7" width="55" height="62.5"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyi-Wa-kU0" userLabel="Asr Notification">
-                                        <rect key="frame" x="8" y="8" width="257" height="29"/>
-                                        <state key="normal" image="notifications_active"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="8" width="157" height="29"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSY-0T-hm9" userLabel="Asr Notification View">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyi-Wa-kU0" userLabel="Asr Notification">
+                                                <rect key="frame" x="8" y="8" width="257" height="29"/>
+                                                <state key="normal" image="notifications_active"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="53" y="24" width="32" height="32"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crX-pc-nY5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="jyi-Wa-kU0"/>
+                                            </mask>
                                         </variation>
-                                        <connections>
-                                            <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crX-pc-nY5"/>
-                                        </connections>
-                                    </button>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="14" y="0.0" width="138" height="80"/>
+                                            <mask key="subviews">
+                                                <include reference="jyi-Wa-kU0"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82745098039999998" green="1" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="cSY-0T-hm9"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="516" width="400" height="78.5"/>
+                                    <mask key="subviews">
+                                        <include reference="cSY-0T-hm9"/>
+                                    </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-fh-2pG" userLabel="Time Maghrib View">
@@ -382,20 +482,45 @@
                                             <rect key="frame" x="173" y="8" width="55" height="63"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpI-jo-Wrn" userLabel="Maghrib Notification">
-                                        <rect key="frame" x="9" y="8" width="256" height="29"/>
-                                        <state key="normal" image="notifications_active"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="9" y="8" width="156" height="29"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-xe-97t" userLabel="Maghrib Notification View">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpI-jo-Wrn" userLabel="Maghrib Notification">
+                                                <rect key="frame" x="9" y="8" width="256" height="29"/>
+                                                <state key="normal" image="notifications_active"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="48" y="20" width="32" height="32"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFa-s8-x45"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="TpI-jo-Wrn"/>
+                                            </mask>
                                         </variation>
-                                        <connections>
-                                            <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFa-s8-x45"/>
-                                        </connections>
-                                    </button>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="0.0" width="137" height="71"/>
+                                            <mask key="subviews">
+                                                <include reference="TpI-jo-Wrn"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="UfN-xe-97t"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="594.5" width="400" height="79"/>
+                                    <mask key="subviews">
+                                        <include reference="UfN-xe-97t"/>
+                                    </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qcg-LG-fER" userLabel="Time Isha View">
@@ -419,20 +544,45 @@
                                             <rect key="frame" x="173" y="8" width="55" height="62"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTf-2D-1Hd" userLabel="Isha Notification">
-                                        <rect key="frame" x="9" y="8" width="256" height="29"/>
-                                        <state key="normal" image="vibration"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="9" y="8" width="156" height="29"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhT-vj-0Jh" userLabel="Isha Notification View">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTf-2D-1Hd" userLabel="Isha Notification">
+                                                <rect key="frame" x="9" y="8" width="256" height="29"/>
+                                                <state key="normal" image="vibration"/>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="57" y="11" width="32" height="32"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVN-mG-PWc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="dTf-2D-1Hd"/>
+                                            </mask>
                                         </variation>
-                                        <connections>
-                                            <action selector="switchNotefcation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVN-mG-PWc"/>
-                                        </connections>
-                                    </button>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="13" width="132" height="54"/>
+                                            <mask key="subviews">
+                                                <include reference="dTf-2D-1Hd"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82745098039999998" green="1" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="fhT-vj-0Jh"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="673.5" width="400" height="78.5"/>
+                                    <mask key="subviews">
+                                        <include reference="fhT-vj-0Jh"/>
+                                    </mask>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-8H-HLT" userLabel="Quote View">
