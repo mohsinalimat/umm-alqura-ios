@@ -1,11 +1,3 @@
-//
-//  ViewController.m
-//  UmmAlQura
-//
-//  Created by Khalid Alnuaim on 11/15/15.
-//  Copyright © 2015 KACST. All rights reserved.
-//
-
 #import <QuartzCore/QuartzCore.h>
 #import "UmmAlQuraVC.h"
 
