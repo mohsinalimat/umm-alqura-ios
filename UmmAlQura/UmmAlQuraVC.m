@@ -7,13 +7,13 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "ViewController.h"
+#import "UmmAlQuraVC.h"
 
-@interface ViewController ()
+@interface UmmAlQuraVC ()
 
 @end
 
-@implementation ViewController
+@implementation UmmAlQuraVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

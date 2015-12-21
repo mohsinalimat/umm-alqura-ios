@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UmmAlQuraVC : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *viewHijri;
 @property (weak, nonatomic) IBOutlet UIView *viewGregorian;
 
