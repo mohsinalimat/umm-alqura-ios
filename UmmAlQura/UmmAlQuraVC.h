@@ -1,16 +1,24 @@
-//
-//  ViewController.h
-//  UmmAlQura
-//
-//  Created by Khalid Alnuaim on 11/15/15.
-//  Copyright © 2015 KACST. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 @interface UmmAlQuraVC : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *viewHijri;
-@property (weak, nonatomic) IBOutlet UIView *viewGregorian;
+
+// Date Hijri
+@property (weak, nonatomic) IBOutlet UILabel *dayHijri;
+@property (weak, nonatomic) IBOutlet UILabel *monthHijri;
+
+// Date Gregorian
+@property (weak, nonatomic) IBOutlet UILabel *dayGregorian;
+@property (weak, nonatomic) IBOutlet UILabel *monthGregorian;
+
+@property (weak, nonatomic) IBOutlet UILabel *currentLocation;
+
+// Event
+@property (weak, nonatomic) IBOutlet UILabel *eventName;
+@property (weak, nonatomic) IBOutlet UILabel *eventSubtext;
+@property (weak, nonatomic) IBOutlet UILabel *eventTime;
+
+// Fajr
+
 
 @end
 
