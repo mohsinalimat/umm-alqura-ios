@@ -247,7 +247,7 @@
                                     <constraint firstItem="8pV-Xt-LXa" firstAttribute="leading" secondItem="2bb-Gq-frZ" secondAttribute="trailing" constant="8" id="xf8-xw-ni6"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFC-Q1-Jul" userLabel="Event View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFC-Q1-Jul" userLabel="Current Event View">
                                 <rect key="frame" x="0.0" y="200" width="600" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="٠١:٣٢:١٤" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH8-a5-TWW" userLabel="Event Time">
@@ -259,7 +259,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المتبقي على" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-jj-ea3" userLabel="Prayer Subtext">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المتبقي على" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-jj-ea3" userLabel="Event Subtext">
                                         <rect key="frame" x="442" y="8" width="150" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="CkI-xe-3QB"/>
@@ -269,7 +269,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الفجر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46j-aU-nzQ" userLabel="Prayer Name">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الفجر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46j-aU-nzQ" userLabel="Event Name">
                                         <rect key="frame" x="442" y="40" width="150" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="EDQ-vw-Xg8"/>
@@ -297,7 +297,7 @@
                                     <constraint firstItem="JKc-jj-ea3" firstAttribute="leading" secondItem="HH8-a5-TWW" secondAttribute="trailing" constant="8" id="zOs-S3-ca0"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3MX-xU-f0Y" userLabel="Time Fajr View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3MX-xU-f0Y" userLabel="Event Fajr View">
                                 <rect key="frame" x="0.0" y="280" width="600" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الفجر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyR-B3-tcY" userLabel="Fajr Title">
@@ -357,7 +357,7 @@
                                     <constraint firstItem="pyR-B3-tcY" firstAttribute="leading" secondItem="6jZ-5f-AFV" secondAttribute="trailing" constant="8" id="xSg-LB-xH9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf3-fp-Ux0" userLabel="Time Sunrise View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf3-fp-Ux0" userLabel="Event Sunrise View">
                                 <rect key="frame" x="0.0" y="325" width="600" height="45"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64h-M5-lC4" userLabel="Sunrise Notification View">
@@ -417,7 +417,7 @@
                                     <constraint firstItem="gd7-eQ-SEb" firstAttribute="centerY" secondItem="Sf3-fp-Ux0" secondAttribute="centerY" id="sco-87-g9G"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7I8-Dl-pGN" userLabel="Time Dhuhr View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7I8-Dl-pGN" userLabel="Event Dhuhr View">
                                 <rect key="frame" x="0.0" y="370" width="600" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الظهر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AG-ZS-ZVj" userLabel="Dhuhr Title">
@@ -477,7 +477,7 @@
                                     <constraint firstItem="9AG-ZS-ZVj" firstAttribute="top" secondItem="7I8-Dl-pGN" secondAttribute="top" constant="8" id="vzM-0j-opq"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTB-cb-tRO" userLabel="Time Asr View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTB-cb-tRO" userLabel="Event Asr View">
                                 <rect key="frame" x="0.0" y="415" width="600" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العصر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1b-yv-vXV" userLabel="Asr Title">
@@ -537,7 +537,7 @@
                                     <constraint firstItem="Njy-mi-hCZ" firstAttribute="centerX" secondItem="RTB-cb-tRO" secondAttribute="centerX" id="wW5-Sd-JG2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-fh-2pG" userLabel="Time Maghrib View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-fh-2pG" userLabel="Event Maghrib View">
                                 <rect key="frame" x="0.0" y="460" width="600" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المغرب" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-pg-1eg" userLabel="Maghrib Title">
@@ -597,7 +597,7 @@
                                     <constraint firstItem="ePj-pg-1eg" firstAttribute="top" secondItem="ESb-fh-2pG" secondAttribute="top" constant="8" id="vmT-xM-D75"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcg-LG-fER" userLabel="Time Isha View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcg-LG-fER" userLabel="Event Isha View">
                                 <rect key="frame" x="0.0" y="505" width="600" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العشاء" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1X-N3-jZc" userLabel="Isha Title">
@@ -732,14 +732,33 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentEventName" destination="46j-aU-nzQ" id="YIT-8u-zxZ"/>
+                        <outlet property="currentEventSubtext" destination="JKc-jj-ea3" id="Rip-8q-EMg"/>
+                        <outlet property="currentEventTime" destination="HH8-a5-TWW" id="rXF-uP-8ug"/>
                         <outlet property="currentLocation" destination="8pV-Xt-LXa" id="uai-Jg-QZ3"/>
                         <outlet property="dayGregorian" destination="2i8-bm-p9d" id="iUd-0Q-2mi"/>
                         <outlet property="dayHijri" destination="7Nf-ZB-Q0c" id="Cah-z0-mgS"/>
-                        <outlet property="eventName" destination="46j-aU-nzQ" id="hR9-Xt-5YV"/>
-                        <outlet property="eventSubtext" destination="JKc-jj-ea3" id="iDM-kO-Vop"/>
-                        <outlet property="eventTime" destination="HH8-a5-TWW" id="8W6-1A-vqx"/>
+                        <outlet property="eventAsrNotification" destination="jyi-Wa-kU0" id="ykO-5g-fyg"/>
+                        <outlet property="eventAsrTime" destination="Njy-mi-hCZ" id="Cxv-jh-cfh"/>
+                        <outlet property="eventAsrTitle" destination="w1b-yv-vXV" id="Lf2-Rc-EYc"/>
+                        <outlet property="eventDhuhrNotification" destination="cYI-Ne-Am3" id="q2d-U1-iCc"/>
+                        <outlet property="eventDhuhrTime" destination="xXE-oP-ki3" id="MyG-8y-9Yp"/>
+                        <outlet property="eventDhuhrTitle" destination="9AG-ZS-ZVj" id="t8y-Bh-bkx"/>
+                        <outlet property="eventFajrNotification" destination="Q89-Qk-Ho2" id="bIo-Gh-d8A"/>
+                        <outlet property="eventFajrTime" destination="6jZ-5f-AFV" id="IMb-9A-5Wf"/>
+                        <outlet property="eventFajrTitle" destination="pyR-B3-tcY" id="3xj-Zw-sBF"/>
+                        <outlet property="eventIshaNotification" destination="dTf-2D-1Hd" id="pKG-AY-5Hz"/>
+                        <outlet property="eventIshaTime" destination="eGt-Td-2lD" id="ElR-R5-RmT"/>
+                        <outlet property="eventIshaTitle" destination="L1X-N3-jZc" id="cbb-cH-EFn"/>
+                        <outlet property="eventMaghribNotification" destination="TpI-jo-Wrn" id="frU-vF-WFf"/>
+                        <outlet property="eventMaghribTime" destination="EMa-fs-be3" id="jpO-W5-dJO"/>
+                        <outlet property="eventMaghribTitle" destination="ePj-pg-1eg" id="Uhf-PZ-SJd"/>
+                        <outlet property="eventSunriseNotification" destination="4Td-eI-IY9" id="WAO-zy-k5U"/>
+                        <outlet property="eventSunriseTime" destination="gd7-eQ-SEb" id="cKI-cO-WTh"/>
+                        <outlet property="eventSunriseTitle" destination="HJG-aT-cJm" id="Wo2-07-GGV"/>
                         <outlet property="monthGregorian" destination="HNw-Dz-bld" id="uME-Z0-6Aq"/>
                         <outlet property="monthHijri" destination="sZb-kZ-93G" id="Nue-Bo-vq5"/>
+                        <outlet property="quote" destination="4yI-SW-GQh" id="j17-kP-cT1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
