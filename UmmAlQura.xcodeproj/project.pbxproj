@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2601533C1C2E50510035E758 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2601533B1C2E50510035E758 /* CoreLocation.framework */; };
+		260153461C2F06BE0035E758 /* PrayTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 260153451C2F06BE0035E758 /* PrayTime.m */; };
+		2601534D1C2F07370035E758 /* LocalizationSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601534B1C2F07370035E758 /* LocalizationSystem.m */; };
+		260153521C2F0A6C0035E758 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260153541C2F0A6C0035E758 /* Localizable.strings */; };
 		266A01FA1C2C8CDB00236507 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 266A01F91C2C8CDB00236507 /* Constants.m */; };
 		FA5D6B151C026C24006CD077 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D6B141C026C24006CD077 /* TestVC.m */; };
 		FAA61CFF1BF921A0001C450E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61CFE1BF921A0001C450E /* main.m */; };
@@ -37,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2601533B1C2E50510035E758 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		260153441C2F06BE0035E758 /* PrayTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayTime.h; sourceTree = "<group>"; };
+		260153451C2F06BE0035E758 /* PrayTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayTime.m; sourceTree = "<group>"; };
+		2601534A1C2F07370035E758 /* LocalizationSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizationSystem.h; sourceTree = "<group>"; };
+		2601534B1C2F07370035E758 /* LocalizationSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizationSystem.m; sourceTree = "<group>"; };
+		260153561C2F0ADF0035E758 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		260153571C2F0B1C0035E758 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		266A01F81C2C8CDB00236507 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		266A01F91C2C8CDB00236507 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		FA5D6B131C026C24006CD077 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
@@ -64,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2601533C1C2E50510035E758 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +96,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260153431C2F06BE0035E758 /* OCPrayerTimes */ = {
+			isa = PBXGroup;
+			children = (
+				260153441C2F06BE0035E758 /* PrayTime.h */,
+				260153451C2F06BE0035E758 /* PrayTime.m */,
+			);
+			path = OCPrayerTimes;
+			sourceTree = "<group>";
+		};
+		260153471C2F06DF0035E758 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				260153481C2F07370035E758 /* AMLocalizedString */,
+				260153431C2F06BE0035E758 /* OCPrayerTimes */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		260153481C2F07370035E758 /* AMLocalizedString */ = {
+			isa = PBXGroup;
+			children = (
+				2601534A1C2F07370035E758 /* LocalizationSystem.h */,
+				2601534B1C2F07370035E758 /* LocalizationSystem.m */,
+			);
+			path = AMLocalizedString;
+			sourceTree = "<group>";
+		};
 		FAA61CF11BF921A0001C450E = {
 			isa = PBXGroup;
 			children = (
+				2601533B1C2E50510035E758 /* CoreLocation.framework */,
 				FAA61CFC1BF921A0001C450E /* UmmAlQura */,
 				FAA61D161BF921A0001C450E /* UmmAlQuraTests */,
 				FAA61D211BF921A0001C450E /* UmmAlQuraUITests */,
@@ -120,6 +160,8 @@
 				FA5D6B141C026C24006CD077 /* TestVC.m */,
 				266A01F81C2C8CDB00236507 /* Constants.h */,
 				266A01F91C2C8CDB00236507 /* Constants.m */,
+				260153471C2F06DF0035E758 /* Libraries */,
+				260153541C2F0A6C0035E758 /* Localizable.strings */,
 			);
 			path = UmmAlQura;
 			sourceTree = "<group>";
@@ -239,6 +281,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = FAA61CF11BF921A0001C450E;
 			productRefGroup = FAA61CFB1BF921A0001C450E /* Products */;
@@ -258,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA61D0D1BF921A0001C450E /* LaunchScreen.storyboard in Resources */,
+				260153521C2F0A6C0035E758 /* Localizable.strings in Resources */,
 				FAA61D0A1BF921A0001C450E /* Assets.xcassets in Resources */,
 				FAA61D081BF921A0001C450E /* Main.storyboard in Resources */,
 			);
@@ -286,6 +330,8 @@
 			files = (
 				266A01FA1C2C8CDB00236507 /* Constants.m in Sources */,
 				FA5D6B151C026C24006CD077 /* TestVC.m in Sources */,
+				260153461C2F06BE0035E758 /* PrayTime.m in Sources */,
+				2601534D1C2F07370035E758 /* LocalizationSystem.m in Sources */,
 				FAA61D051BF921A0001C450E /* UmmAlQuraVC.m in Sources */,
 				FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */,
 				FAA61CFF1BF921A0001C450E /* main.m in Sources */,
@@ -324,6 +370,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		260153541C2F0A6C0035E758 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				260153561C2F0ADF0035E758 /* ar */,
+				260153571C2F0B1C0035E758 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FAA61D061BF921A0001C450E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

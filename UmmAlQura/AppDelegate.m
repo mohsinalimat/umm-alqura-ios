@@ -1,4 +1,6 @@
 #import "AppDelegate.h"
+#import "Constants.h"
+#import "LocalizationSystem.h"
 
 @interface AppDelegate ()
 
@@ -8,8 +10,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    return YES;
+
+	// if the object for the "kIsUsingCurrentLocation" not setup that mean this is the first time
+	// the application launches, so setup the init settings.
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:kIsUsingCurrentLocation]) {
+		[self initSettings];
+	}
+	
+	return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -32,6 +40,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+- (void)initSettings {
+	[[NSUserDefaults standardUserDefaults] setObject:kYes forKey:kIsUsingCurrentLocation];
+    
+    // setup languge based on the device languge
+    LocalizationSetLanguage(@"ar");
+    
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

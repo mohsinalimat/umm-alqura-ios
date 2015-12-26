@@ -78,7 +78,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZ2-eX-Ghc" userLabel="Date Hijri View">
                                         <rect key="frame" x="345" y="0.0" width="255" height="90"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="٢٢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nf-ZB-Q0c" userLabel="Date Hijri Day">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nf-ZB-Q0c" userLabel="Date Hijri Day">
                                                 <rect key="frame" x="8" y="8" width="239" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="kmv-kH-AGf"/>
@@ -87,7 +87,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="صفر (٢)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-kZ-93G" userLabel="Date Hijri Month">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="safer (2)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-kZ-93G" userLabel="Date Hijri Month">
                                                 <rect key="frame" x="8" y="52" width="239" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="x9z-BC-VSw"/>
@@ -115,7 +115,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kli-gv-V8K" userLabel="Date Gregorian View">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="90"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="١٤" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i8-bm-p9d" userLabel="Date Gregorian Month">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i8-bm-p9d" userLabel="Date Gregorian Month">
                                                 <rect key="frame" x="8" y="8" width="239" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="A30-La-s9y"/>
@@ -124,7 +124,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ديسمبر (١٢)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNw-Dz-bld" userLabel="Date Gregorian Day">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desamber (12)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNw-Dz-bld" userLabel="Date Gregorian Day">
                                                 <rect key="frame" x="8" y="52" width="239" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="By3-Wc-V7X"/>
@@ -202,7 +202,7 @@
                                             <segue destination="og9-lf-pnG" kind="presentation" id="5gM-nH-zUf"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الرياض" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pV-Xt-LXa" userLabel="Current Location Text">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riyadh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pV-Xt-LXa" userLabel="Current Location Text">
                                         <rect key="frame" x="56" y="8" width="488" height="74"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="74" id="f7m-rn-Rqw"/>
@@ -250,8 +250,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFC-Q1-Jul" userLabel="Current Event View">
                                 <rect key="frame" x="0.0" y="200" width="600" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="٠١:٣٢:١٤" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH8-a5-TWW" userLabel="Event Time">
-                                        <rect key="frame" x="8" y="8" width="426" height="64"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:32:26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH8-a5-TWW" userLabel="Event Time">
+                                        <rect key="frame" x="166" y="8" width="426" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="5ba-RX-Sep"/>
                                         </constraints>
@@ -259,18 +259,8 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المتبقي على" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-jj-ea3" userLabel="Event Subtext">
-                                        <rect key="frame" x="442" y="8" width="150" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="CkI-xe-3QB"/>
-                                            <constraint firstAttribute="height" constant="24" id="n5A-Vf-1xJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الفجر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46j-aU-nzQ" userLabel="Event Name">
-                                        <rect key="frame" x="442" y="40" width="150" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fajr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46j-aU-nzQ" userLabel="Event Name">
+                                        <rect key="frame" x="8" y="40" width="150" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="EDQ-vw-Xg8"/>
                                             <constraint firstAttribute="height" constant="32" id="un2-PK-c35"/>
@@ -279,34 +269,44 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-jj-ea3" userLabel="Event Subtext">
+                                        <rect key="frame" x="8" y="8" width="150" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="CkI-xe-3QB"/>
+                                            <constraint firstAttribute="height" constant="24" id="n5A-Vf-1xJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82745098039999998" green="1" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="46j-aU-nzQ" firstAttribute="top" secondItem="JKc-jj-ea3" secondAttribute="bottom" constant="8" id="19T-Pz-YEq"/>
-                                    <constraint firstItem="HH8-a5-TWW" firstAttribute="top" secondItem="lFC-Q1-Jul" secondAttribute="top" constant="8" id="3Dh-FT-JNn"/>
-                                    <constraint firstItem="46j-aU-nzQ" firstAttribute="leading" secondItem="HH8-a5-TWW" secondAttribute="trailing" constant="8" id="APd-A8-R8p"/>
-                                    <constraint firstItem="46j-aU-nzQ" firstAttribute="leading" secondItem="HH8-a5-TWW" secondAttribute="trailing" constant="8" id="FZC-r3-nPa"/>
-                                    <constraint firstAttribute="trailing" secondItem="JKc-jj-ea3" secondAttribute="trailing" constant="8" id="OSF-ZR-a4r"/>
-                                    <constraint firstAttribute="trailing" secondItem="46j-aU-nzQ" secondAttribute="trailing" constant="8" id="Vku-3M-C5E"/>
-                                    <constraint firstItem="46j-aU-nzQ" firstAttribute="top" secondItem="JKc-jj-ea3" secondAttribute="bottom" constant="8" id="Y3A-Qn-CJR"/>
-                                    <constraint firstItem="JKc-jj-ea3" firstAttribute="top" secondItem="lFC-Q1-Jul" secondAttribute="top" constant="8" id="bsW-Nl-iKN"/>
-                                    <constraint firstAttribute="bottom" secondItem="46j-aU-nzQ" secondAttribute="bottom" constant="8" id="ilM-1S-2Za"/>
+                                    <constraint firstItem="46j-aU-nzQ" firstAttribute="top" secondItem="JKc-jj-ea3" secondAttribute="bottom" constant="8" id="QMF-X5-MYl"/>
+                                    <constraint firstItem="46j-aU-nzQ" firstAttribute="top" secondItem="JKc-jj-ea3" secondAttribute="bottom" constant="8" id="RF6-UZ-pJG"/>
+                                    <constraint firstItem="46j-aU-nzQ" firstAttribute="leading" secondItem="lFC-Q1-Jul" secondAttribute="leading" constant="8" id="TB5-k3-yd7"/>
+                                    <constraint firstAttribute="bottom" secondItem="HH8-a5-TWW" secondAttribute="bottom" constant="8" id="VNK-dj-Syn"/>
+                                    <constraint firstItem="JKc-jj-ea3" firstAttribute="top" secondItem="lFC-Q1-Jul" secondAttribute="top" constant="8" id="dnb-31-PCA"/>
+                                    <constraint firstAttribute="bottom" secondItem="46j-aU-nzQ" secondAttribute="bottom" constant="8" id="fnd-Aa-WI3"/>
+                                    <constraint firstItem="HH8-a5-TWW" firstAttribute="leading" secondItem="46j-aU-nzQ" secondAttribute="trailing" constant="8" id="hr9-jp-F0q"/>
+                                    <constraint firstItem="HH8-a5-TWW" firstAttribute="top" secondItem="lFC-Q1-Jul" secondAttribute="top" constant="8" id="inM-5f-0Ao"/>
+                                    <constraint firstItem="JKc-jj-ea3" firstAttribute="leading" secondItem="lFC-Q1-Jul" secondAttribute="leading" constant="8" id="pLZ-ML-stZ"/>
                                     <constraint firstAttribute="height" constant="80" id="pPN-9S-SvM"/>
-                                    <constraint firstAttribute="bottom" secondItem="HH8-a5-TWW" secondAttribute="bottom" constant="8" id="ryX-Q4-12g"/>
-                                    <constraint firstItem="HH8-a5-TWW" firstAttribute="leading" secondItem="lFC-Q1-Jul" secondAttribute="leading" constant="8" id="tdz-v0-qry"/>
-                                    <constraint firstItem="JKc-jj-ea3" firstAttribute="leading" secondItem="HH8-a5-TWW" secondAttribute="trailing" constant="8" id="zOs-S3-ca0"/>
+                                    <constraint firstItem="HH8-a5-TWW" firstAttribute="leading" secondItem="46j-aU-nzQ" secondAttribute="trailing" constant="8" id="ta1-zG-GXa"/>
+                                    <constraint firstAttribute="trailing" secondItem="HH8-a5-TWW" secondAttribute="trailing" constant="8" id="vGf-Zx-BLF"/>
+                                    <constraint firstItem="HH8-a5-TWW" firstAttribute="leading" secondItem="JKc-jj-ea3" secondAttribute="trailing" constant="8" id="xN3-Iy-wPs"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3MX-xU-f0Y" userLabel="Event Fajr View">
                                 <rect key="frame" x="0.0" y="280" width="600" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الفجر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyR-B3-tcY" userLabel="Fajr Right">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyR-B3-tcY" userLabel="Fajr Time">
                                         <rect key="frame" x="338" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="٠٥:٣٦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jZ-5f-AFV" userLabel="Fajr Left">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fajr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jZ-5f-AFV" userLabel="Fajr Title">
                                         <rect key="frame" x="8" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -358,13 +358,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf3-fp-Ux0" userLabel="Event Sunrise View">
                                 <rect key="frame" x="0.0" y="325" width="600" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الشروق" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJG-aT-cJm" userLabel="Sunrise Right">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJG-aT-cJm" userLabel="Sunrise Time">
                                         <rect key="frame" x="338" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="٠٧:٠١" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-eQ-SEb" userLabel="Sunrise Left">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunrise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-eQ-SEb" userLabel="Sunrise Title">
                                         <rect key="frame" x="8" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -416,13 +416,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7I8-Dl-pGN" userLabel="Event Dhuhr View">
                                 <rect key="frame" x="0.0" y="370" width="600" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الظهر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AG-ZS-ZVj" userLabel="Dhuhr Right">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:53" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AG-ZS-ZVj" userLabel="Dhuhr Time">
                                         <rect key="frame" x="338" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="١٢:٢٠" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXE-oP-ki3" userLabel="Dhuhr Left">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhuhr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXE-oP-ki3" userLabel="Dhuhr Title">
                                         <rect key="frame" x="8" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -474,7 +474,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTB-cb-tRO" userLabel="Event Asr View">
                                 <rect key="frame" x="0.0" y="415" width="600" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العصر" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1b-yv-vXV" userLabel="Asr Right">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:52" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1b-yv-vXV" userLabel="Asr Time">
                                         <rect key="frame" x="338" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -502,7 +502,7 @@
                                             <constraint firstItem="jyi-Wa-kU0" firstAttribute="centerX" secondItem="cSY-0T-hm9" secondAttribute="centerX" id="dEs-nu-snQ"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="٠٣:١٨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njy-mi-hCZ" userLabel="Asr Left">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njy-mi-hCZ" userLabel="Asr Title">
                                         <rect key="frame" x="8" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -532,13 +532,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-fh-2pG" userLabel="Event Maghrib View">
                                 <rect key="frame" x="0.0" y="460" width="600" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المغرب" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-pg-1eg" userLabel="Maghrib Right">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-pg-1eg" userLabel="Maghrib Time">
                                         <rect key="frame" x="338" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="٠٥:٣٨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-fs-be3" userLabel="Maghrib Left">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maghrib" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-fs-be3" userLabel="Maghrib Title">
                                         <rect key="frame" x="8" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -590,13 +590,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcg-LG-fER" userLabel="Event Isha View">
                                 <rect key="frame" x="0.0" y="505" width="600" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العشاء" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1X-N3-jZc" userLabel="Isha Right">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1X-N3-jZc" userLabel="Isha Time">
                                         <rect key="frame" x="338" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="٠٧:٠٨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGt-Td-2lD" userLabel="Isha Left">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGt-Td-2lD" userLabel="Isha Title">
                                         <rect key="frame" x="8" y="8" width="254" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -648,7 +648,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-8H-HLT" userLabel="Quote View">
                                 <rect key="frame" x="0.0" y="558" width="600" height="42"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="صبرٌ جميلٌ والله المستعان" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-SW-GQh" userLabel="Quote">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God being my helper" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-SW-GQh" userLabel="Quote">
                                         <rect key="frame" x="8" y="0.0" width="584" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="W8M-xn-kx2"/>
@@ -726,24 +726,24 @@
                         <outlet property="currentLocation" destination="8pV-Xt-LXa" id="uai-Jg-QZ3"/>
                         <outlet property="dayGregorian" destination="2i8-bm-p9d" id="iUd-0Q-2mi"/>
                         <outlet property="dayHijri" destination="7Nf-ZB-Q0c" id="Cah-z0-mgS"/>
-                        <outlet property="eventAsrLeft" destination="Njy-mi-hCZ" id="guQ-Vq-ekc"/>
                         <outlet property="eventAsrNotification" destination="jyi-Wa-kU0" id="ykO-5g-fyg"/>
-                        <outlet property="eventAsrRight" destination="w1b-yv-vXV" id="a2D-Qx-4Kw"/>
-                        <outlet property="eventDhuhrLeft" destination="xXE-oP-ki3" id="J3n-hW-4hP"/>
+                        <outlet property="eventAsrTime" destination="w1b-yv-vXV" id="aGO-fF-goB"/>
+                        <outlet property="eventAsrTitle" destination="Njy-mi-hCZ" id="d6M-0Z-8y6"/>
                         <outlet property="eventDhuhrNotification" destination="cYI-Ne-Am3" id="q2d-U1-iCc"/>
-                        <outlet property="eventDhuhrRight" destination="9AG-ZS-ZVj" id="g7g-lh-f0u"/>
-                        <outlet property="eventFajrLeft" destination="6jZ-5f-AFV" id="PNm-9z-m1M"/>
+                        <outlet property="eventDhuhrTime" destination="9AG-ZS-ZVj" id="oYH-p7-ceV"/>
+                        <outlet property="eventDhuhrTitle" destination="xXE-oP-ki3" id="bmF-Ki-6U1"/>
                         <outlet property="eventFajrNotification" destination="Q89-Qk-Ho2" id="bIo-Gh-d8A"/>
-                        <outlet property="eventFajrRight" destination="pyR-B3-tcY" id="CG6-Xm-IyE"/>
-                        <outlet property="eventIshaLeft" destination="eGt-Td-2lD" id="nWM-D2-tUd"/>
+                        <outlet property="eventFajrTime" destination="pyR-B3-tcY" id="oiq-3i-gWx"/>
+                        <outlet property="eventFajrTitle" destination="6jZ-5f-AFV" id="Z56-oG-gdy"/>
                         <outlet property="eventIshaNotification" destination="dTf-2D-1Hd" id="pKG-AY-5Hz"/>
-                        <outlet property="eventIshaRight" destination="L1X-N3-jZc" id="w6V-C9-Oea"/>
-                        <outlet property="eventMaghribLeft" destination="EMa-fs-be3" id="0MP-dT-qvK"/>
+                        <outlet property="eventIshaTime" destination="L1X-N3-jZc" id="CVo-yz-veX"/>
+                        <outlet property="eventIshaTitle" destination="eGt-Td-2lD" id="s5v-Jc-2YE"/>
                         <outlet property="eventMaghribNotification" destination="TpI-jo-Wrn" id="frU-vF-WFf"/>
-                        <outlet property="eventMaghribRight" destination="ePj-pg-1eg" id="8wF-nB-PBu"/>
-                        <outlet property="eventSunriseLeft" destination="gd7-eQ-SEb" id="TTg-pF-udT"/>
+                        <outlet property="eventMaghribTime" destination="ePj-pg-1eg" id="U1m-EB-E1L"/>
+                        <outlet property="eventMaghribTitle" destination="EMa-fs-be3" id="qMo-w3-An0"/>
                         <outlet property="eventSunriseNotification" destination="4Td-eI-IY9" id="WAO-zy-k5U"/>
-                        <outlet property="eventSunriseRight" destination="HJG-aT-cJm" id="CHM-Ja-YAf"/>
+                        <outlet property="eventSunriseTime" destination="HJG-aT-cJm" id="h7a-1E-TjI"/>
+                        <outlet property="eventSunriseTitle" destination="gd7-eQ-SEb" id="ixW-5b-gGU"/>
                         <outlet property="monthGregorian" destination="HNw-Dz-bld" id="uME-Z0-6Aq"/>
                         <outlet property="monthHijri" destination="sZb-kZ-93G" id="Nue-Bo-vq5"/>
                         <outlet property="quote" destination="4yI-SW-GQh" id="j17-kP-cT1"/>

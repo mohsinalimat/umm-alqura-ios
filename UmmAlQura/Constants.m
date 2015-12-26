@@ -1,6 +1,14 @@
 #import "Constants.h"
 
 @implementation Constants
+NSString *const kYes	= @"YES";
+NSString *const kNo		= @"NO";
+
+// Location
+NSString *const kIsUsingCurrentLocation		= @"IS_USING_CURRENT_LOCATION";	// Yes or No
+NSString *const kCurrentLocationName		= @"CURRENT_LOCATION_NAME";
+NSString *const kCurrentLocationLatitude	= @"CURRENT_LOCATION_LATITUDE";
+NSString *const kCurrentLocationLongitude	= @"CURRENT_LOCATION_LONGITUDE";
 
 // Notification settings
 // 1 = off
