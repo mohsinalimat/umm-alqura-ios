@@ -1,5 +1,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "UmmAlQuraVC.h"
+#import "Constants.h"
 
 @interface UmmAlQuraVC ()
 
@@ -7,28 +8,32 @@
 
 @implementation UmmAlQuraVC
 
+#pragma mark - lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-
-//    self.viewHijri.layer.borderWidth = 0.5f;
-//    self.viewHijri.layer.borderColor = [UIColor blackColor].CGColor;
-//    self.viewGregorian.layer.borderWidth = 0.5f;
-//    self.viewGregorian.layer.borderColor = [UIColor blackColor].CGColor;
+	[self setupDate];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+- (void)setupDate {
+	_dayGregorian.text = @"";
+	_monthGregorian.text = @"";
+	_dayHijri.text = @"";
+	_monthHijri.text = @"";
 }
+
+
+
 
 - (IBAction)switchNotefcation:(id)sender {
     UIButton *resultButton = (UIButton *)sender;
     NSLog(@"%@", resultButton.currentImage);
+	NSLog(@"sender %@", sender);
     
     if (resultButton.tag == 3) {
         [resultButton setImage:[UIImage imageNamed:@"vibration"] forState:UIControlStateNormal];
@@ -44,5 +49,23 @@
         [resultButton setTag:1];
     }
 
+}
+
+- (IBAction)changeFajrNotification {
+}
+
+- (IBAction)changeSunriseNotification {
+}
+
+- (IBAction)changeDhuhrNotification {
+}
+
+- (IBAction)changeAsrNotification {
+}
+
+- (IBAction)changeMaghribNotification {
+}
+
+- (IBAction)changeIshaNotification {
 }
 @end

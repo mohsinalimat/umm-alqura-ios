@@ -19,33 +19,33 @@
 @property (weak, nonatomic) IBOutlet UILabel	*currentEventTime;
 
 // Fajr
-@property (weak, nonatomic) IBOutlet UILabel	*eventFajrTitle;
-@property (weak, nonatomic) IBOutlet UILabel	*eventFajrTime;
+@property (weak, nonatomic) IBOutlet UILabel	*eventFajrRight;
+@property (weak, nonatomic) IBOutlet UILabel	*eventFajrLeft;
 @property (weak, nonatomic) IBOutlet UIButton	*eventFajrNotification;
 
 // Sunrise
-@property (weak, nonatomic) IBOutlet UILabel	*eventSunriseTitle;
-@property (weak, nonatomic) IBOutlet UILabel	*eventSunriseTime;
+@property (weak, nonatomic) IBOutlet UILabel	*eventSunriseRight;
+@property (weak, nonatomic) IBOutlet UILabel	*eventSunriseLeft;
 @property (weak, nonatomic) IBOutlet UIButton	*eventSunriseNotification;
 
 // Dhuhr
-@property (weak, nonatomic) IBOutlet UILabel	*eventDhuhrTitle;
-@property (weak, nonatomic) IBOutlet UILabel	*eventDhuhrTime;
+@property (weak, nonatomic) IBOutlet UILabel	*eventDhuhrRight;
+@property (weak, nonatomic) IBOutlet UILabel	*eventDhuhrLeft;
 @property (weak, nonatomic) IBOutlet UIButton	*eventDhuhrNotification;
 
 // Asr
-@property (weak, nonatomic) IBOutlet UILabel	*eventAsrTitle;
-@property (weak, nonatomic) IBOutlet UILabel	*eventAsrTime;
+@property (weak, nonatomic) IBOutlet UILabel	*eventAsrRight;
+@property (weak, nonatomic) IBOutlet UILabel	*eventAsrLeft;
 @property (weak, nonatomic) IBOutlet UIButton	*eventAsrNotification;
 
 // Maghrib
-@property (weak, nonatomic) IBOutlet UILabel	*eventMaghribTitle;
-@property (weak, nonatomic) IBOutlet UILabel	*eventMaghribTime;
+@property (weak, nonatomic) IBOutlet UILabel	*eventMaghribRight;
+@property (weak, nonatomic) IBOutlet UILabel	*eventMaghribLeft;
 @property (weak, nonatomic) IBOutlet UIButton	*eventMaghribNotification;
 
 // Isha
-@property (weak, nonatomic) IBOutlet UILabel	*eventIshaTitle;
-@property (weak, nonatomic) IBOutlet UILabel	*eventIshaTime;
+@property (weak, nonatomic) IBOutlet UILabel	*eventIshaRight;
+@property (weak, nonatomic) IBOutlet UILabel	*eventIshaLeft;
 @property (weak, nonatomic) IBOutlet UIButton	*eventIshaNotification;
 
 //Quote

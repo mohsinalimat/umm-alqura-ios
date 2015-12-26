@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		266A01FA1C2C8CDB00236507 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 266A01F91C2C8CDB00236507 /* Constants.m */; };
 		FA5D6B151C026C24006CD077 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D6B141C026C24006CD077 /* TestVC.m */; };
 		FAA61CFF1BF921A0001C450E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61CFE1BF921A0001C450E /* main.m */; };
 		FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D011BF921A0001C450E /* AppDelegate.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		266A01F81C2C8CDB00236507 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		266A01F91C2C8CDB00236507 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		FA5D6B131C026C24006CD077 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		FA5D6B141C026C24006CD077 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		FAA61CFA1BF921A0001C450E /* UmmAlQura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmmAlQura.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +118,8 @@
 				FAA61CFD1BF921A0001C450E /* Supporting Files */,
 				FA5D6B131C026C24006CD077 /* TestVC.h */,
 				FA5D6B141C026C24006CD077 /* TestVC.m */,
+				266A01F81C2C8CDB00236507 /* Constants.h */,
+				266A01F91C2C8CDB00236507 /* Constants.m */,
 			);
 			path = UmmAlQura;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				266A01FA1C2C8CDB00236507 /* Constants.m in Sources */,
 				FA5D6B151C026C24006CD077 /* TestVC.m in Sources */,
 				FAA61D051BF921A0001C450E /* UmmAlQuraVC.m in Sources */,
 				FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */,
