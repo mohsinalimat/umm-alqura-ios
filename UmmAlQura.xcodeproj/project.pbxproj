@@ -48,6 +48,7 @@
 		2601534B1C2F07370035E758 /* LocalizationSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizationSystem.m; sourceTree = "<group>"; };
 		260153561C2F0ADF0035E758 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		260153571C2F0B1C0035E758 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		260153581C2F3B030035E758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		266A01F81C2C8CDB00236507 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		266A01F91C2C8CDB00236507 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		FA5D6B131C026C24006CD077 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
@@ -375,6 +376,7 @@
 			children = (
 				260153561C2F0ADF0035E758 /* ar */,
 				260153571C2F0B1C0035E758 /* en */,
+				260153581C2F3B030035E758 /* Base */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

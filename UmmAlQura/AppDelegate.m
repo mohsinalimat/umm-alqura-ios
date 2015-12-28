@@ -47,7 +47,7 @@
 	[[NSUserDefaults standardUserDefaults] setObject:kYes forKey:kIsUsingCurrentLocation];
     
     // setup languge based on the device languge
-    LocalizationSetLanguage(@"ar");
+    //LocalizationSetLanguage(@"ar");
     
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }

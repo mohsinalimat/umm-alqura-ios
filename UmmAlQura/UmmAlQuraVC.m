@@ -21,7 +21,7 @@ CLLocationManager *locationManager;
 	locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
 	[locationManager startUpdatingLocation];
     
-    LocalizationSetLanguage(@"Arabic");
+    LocalizationSetLanguage(@"ar");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -94,17 +94,17 @@ CLLocationManager *locationManager;
                                                   andTimezone:[prayerTime getTimeZone]];
     
     
-    _eventFajrTitle.text    = @"الفجر";
+    _eventFajrTitle.text    = NSLocalizedString(@"Event_Fajr", nil);
     _eventFajrTime.text     = [prayerTimes objectAtIndex:0];
-    _eventSunriseTitle.text = @"الشروق";
+    _eventSunriseTitle.text = NSLocalizedString(@"Event_Sunrise", nil);
     _eventSunriseTime.text  = [prayerTimes objectAtIndex:1];
-    _eventDhuhrTitle.text   = @"الظهر";
+    _eventDhuhrTitle.text   = NSLocalizedString(@"Event_Dhuhr", nil);
     _eventDhuhrTime.text    = [prayerTimes objectAtIndex:2];
-    _eventAsrTitle.text     = NSLocalizedString(@"Prayer_Asr", nil);
+    _eventAsrTitle.text     = NSLocalizedString(@"Event_Asr", nil);
     _eventAsrTime.text      = [prayerTimes objectAtIndex:3];
-    _eventMaghribTitle.text = @"المغرب";
+    _eventMaghribTitle.text = NSLocalizedString(@"Event_Maghrib", nil);
     _eventMaghribTime.text  = [prayerTimes objectAtIndex:4];
-    _eventIshaTitle.text    = @"العشاء";
+    _eventIshaTitle.text    = NSLocalizedString(@"Event_Isha", nil);
     _eventIshaTime.text     = [prayerTimes objectAtIndex:6];
 }
 
@@ -132,6 +132,7 @@ CLLocationManager *locationManager;
 }
 
 - (IBAction)changeFajrNotification {
+    exit(0);
 }
 
 - (IBAction)changeSunriseNotification {
