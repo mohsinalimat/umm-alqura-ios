@@ -11,6 +11,7 @@
 		260153461C2F06BE0035E758 /* PrayTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 260153451C2F06BE0035E758 /* PrayTime.m */; };
 		2601534D1C2F07370035E758 /* LocalizationSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601534B1C2F07370035E758 /* LocalizationSystem.m */; };
 		260153521C2F0A6C0035E758 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260153541C2F0A6C0035E758 /* Localizable.strings */; };
+		2601535B1C31DBC40035E758 /* UmmAlQuraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601535A1C31DBC40035E758 /* UmmAlQuraManager.m */; };
 		266A01FA1C2C8CDB00236507 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 266A01F91C2C8CDB00236507 /* Constants.m */; };
 		FA5D6B151C026C24006CD077 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D6B141C026C24006CD077 /* TestVC.m */; };
 		FAA61CFF1BF921A0001C450E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61CFE1BF921A0001C450E /* main.m */; };
@@ -49,6 +50,8 @@
 		260153561C2F0ADF0035E758 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		260153571C2F0B1C0035E758 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		260153581C2F3B030035E758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		260153591C31DBC40035E758 /* UmmAlQuraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UmmAlQuraManager.h; sourceTree = "<group>"; };
+		2601535A1C31DBC40035E758 /* UmmAlQuraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UmmAlQuraManager.m; sourceTree = "<group>"; };
 		266A01F81C2C8CDB00236507 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		266A01F91C2C8CDB00236507 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		FA5D6B131C026C24006CD077 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				266A01F91C2C8CDB00236507 /* Constants.m */,
 				260153471C2F06DF0035E758 /* Libraries */,
 				260153541C2F0A6C0035E758 /* Localizable.strings */,
+				260153591C31DBC40035E758 /* UmmAlQuraManager.h */,
+				2601535A1C31DBC40035E758 /* UmmAlQuraManager.m */,
 			);
 			path = UmmAlQura;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				260153461C2F06BE0035E758 /* PrayTime.m in Sources */,
 				2601534D1C2F07370035E758 /* LocalizationSystem.m in Sources */,
 				FAA61D051BF921A0001C450E /* UmmAlQuraVC.m in Sources */,
+				2601535B1C31DBC40035E758 /* UmmAlQuraManager.m in Sources */,
 				FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */,
 				FAA61CFF1BF921A0001C450E /* main.m in Sources */,
 			);
