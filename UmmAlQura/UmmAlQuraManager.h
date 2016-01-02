@@ -1,13 +1,17 @@
-//
-//  UmmAlQuraManager.h
-//  UmmAlQura
-//
-//  Created by Khalid Alnuaim on 12/29/15.
-//  Copyright © 2015 KACST. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 @interface UmmAlQuraManager : NSObject
 
+// Date Hijri
+@property (strong, nonatomic) NSString	*dayHijri;
+@property (strong, nonatomic) NSString	*monthHijri;
+
+// Date Gregorian
+@property (strong, nonatomic) NSString	*dayGregorian;
+@property (strong, nonatomic) NSString	*monthGregorian;
+
++ (UmmAlQuraManager*)sharedManager;
+- (void)setupLocation;
+- (void)setupDate;
+- (void)setupEvents;
 @end
