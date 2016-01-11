@@ -32,7 +32,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1g6-aB-Acz">
-                        <barButtonItem key="rightBarButtonItem" title="تم" id="y1d-MI-9P2">
+                        <barButtonItem key="leftBarButtonItem" title="تم" id="y1d-MI-9P2">
                             <connections>
                                 <action selector="done:" destination="Eh3-Yg-o4o" id="tPx-NU-Ql2"/>
                             </connections>
@@ -773,7 +773,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jdE-xs-9Aj">
-                        <barButtonItem key="rightBarButtonItem" title="تم" id="VNi-5A-zoe">
+                        <barButtonItem key="leftBarButtonItem" title="تم" id="VNi-5A-zoe">
                             <connections>
                                 <action selector="done:" destination="zY3-iq-ayv" id="MV4-ko-AbS"/>
                             </connections>
@@ -828,7 +828,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Im8-Ta-RbE">
-                        <barButtonItem key="rightBarButtonItem" title="تم" id="JLl-7W-Cst">
+                        <barButtonItem key="leftBarButtonItem" title="تم" id="JLl-7W-Cst">
                             <connections>
                                 <action selector="done:" destination="cGS-uk-VNo" id="tZO-q6-4Nb"/>
                             </connections>
@@ -883,7 +883,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qLl-3v-nzK">
-                        <barButtonItem key="rightBarButtonItem" title="تم" id="9tT-Dw-3B6">
+                        <barButtonItem key="leftBarButtonItem" title="تم" id="9tT-Dw-3B6">
                             <connections>
                                 <action selector="done:" destination="qx9-OI-GXm" id="WaW-i3-OCX"/>
                             </connections>
@@ -936,6 +936,6 @@
         <image name="notification_off" width="24" height="24"/>
         <image name="place" width="24" height="24"/>
         <image name="settings" width="24" height="24"/>
-        <image name="umalqura_logo" width="1772" height="1772"/>
+        <image name="umalqura_logo" width="3000" height="3000"/>
     </resources>
 </document>

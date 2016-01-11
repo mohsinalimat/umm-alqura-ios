@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "umalqura_logo.jpg",
+      "filename" : "umm-alqura-day-area-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "umm-alqura-day-area.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "umm-alqura-day-area-2.png",
       "scale" : "3x"
     }
   ],

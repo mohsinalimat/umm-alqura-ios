@@ -1,6 +1,8 @@
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface UmmAlQuraVC : UIViewController
+@interface UmmAlQuraVC : UIViewController <CLLocationManagerDelegate>
 
 // Date Hijri
 @property (weak, nonatomic) IBOutlet UILabel	*dayHijri;

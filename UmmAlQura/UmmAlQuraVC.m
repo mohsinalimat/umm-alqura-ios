@@ -1,8 +1,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "PrayTime.h"
 #import "UmmAlQuraVC.h"
-#import "Constants.h"
-#import "LocalizationSystem.h"
+#import "AppConstants.h"
 #import "UmmAlQuraManager.h"
 
 @interface UmmAlQuraVC ()
@@ -17,35 +16,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _ummAlQuraManager = [UmmAlQuraManager  sharedManager];
-    LocalizationSetLanguage(@"en");
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:kIsUsingCurrentLocation] isEqualToString:kYes]) {
+        _ummAlQuraManager.locationManager.delegate = self;
+    }
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-	[self setupDate];
-	[self setupLocation];
+    [self setupLocation];
+    [self setupDate];
 	[self setupEvents];
 }
 
+- (void)setupLocation {
+    //[_ummAlQuraManager setupLocation];
+}
 
 
 - (void)setupDate {
-	// Gregorian
-	_dayGregorian.text      = [_ummAlQuraManager dayGregorian];
-	_monthGregorian.text    = [_ummAlQuraManager monthGregorian];
+	NSDictionary *_date = [_ummAlQuraManager retrieveCurrentDate];
+
+    // Gregorian
+	_dayGregorian.text      = [_date objectForKey:kDayGregorian];
+	_monthGregorian.text    = [_date objectForKey:kMonthGregorian];
 	
 	// Hijri
-	_dayHijri.text      = [_ummAlQuraManager dayHijri];
-	_monthHijri.text    = [_ummAlQuraManager monthHijri];
+	_dayHijri.text      = [_date objectForKey:kDayHijri];
+	_monthHijri.text    = [_date objectForKey:kMonthHijri];
 }
 
-- (void)setupLocation {
-	
-	
-}
+
 
 
 - (void)setupEvents {
+    //[_ummAlQuraManager setupEvents];
 //    PrayTime *prayerTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
 //                                               andCalculation:CalculationMethodMakkah];
 //    NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]

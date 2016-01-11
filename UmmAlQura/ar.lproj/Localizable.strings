@@ -6,10 +6,10 @@
   Copyright © 2015 KACST. All rights reserved.
 */
 
-// Prayers
-"Event_Fajr"        = "Fajr";
-"Event_Sunrise"     = "Sunrise";
-"Event_Dhuhr"       = "Dhuhr";
-"Event_Asr"         = "Asr";
-"Event_Maghrib"     = "Maghrib";
-"Event_Isha"        = "Isha";
+// Events
+"Event_Fajr"        = "الفجر";
+"Event_Sunrise"     = "الشروق";
+"Event_Dhuhr"       = "الظهر";
+"Event_Asr"         = "العصر";
+"Event_Maghrib"     = "المغرب";
+"Event_Isha"        = "العشاء";
