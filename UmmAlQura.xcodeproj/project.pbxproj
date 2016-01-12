@@ -164,6 +164,8 @@
 				FAA61D011BF921A0001C450E /* AppDelegate.m */,
 				260153591C31DBC40035E758 /* UmmAlQuraManager.h */,
 				2601535A1C31DBC40035E758 /* UmmAlQuraManager.m */,
+				FA77306C1C43DB3900C7BEF7 /* UmmAlQuraUtilities.h */,
+				FA77306D1C43DB3900C7BEF7 /* UmmAlQuraUtilities.m */,
 				26425A631C3AF46D00549DB9 /* Controller */,
 				26425A621C3AF44700549DB9 /* View */,
 				FAA61D091BF921A0001C450E /* Assets.xcassets */,
@@ -173,8 +175,6 @@
 				FAA61D0E1BF921A0001C450E /* Info.plist */,
 				260153471C2F06DF0035E758 /* Libraries */,
 				FAA61CFD1BF921A0001C450E /* Supporting Files */,
-				FA77306C1C43DB3900C7BEF7 /* UmmAlQuraUtilities.h */,
-				FA77306D1C43DB3900C7BEF7 /* UmmAlQuraUtilities.m */,
 			);
 			path = UmmAlQura;
 			sourceTree = "<group>";

@@ -198,13 +198,12 @@
                                             <segue destination="og9-lf-pnG" kind="presentation" id="5gM-nH-zUf"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riyadh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pV-Xt-LXa" userLabel="Current Location Text">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riyadh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="8pV-Xt-LXa" userLabel="Current Location Text">
                                         <rect key="frame" x="56" y="8" width="488" height="74"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="74" id="f7m-rn-Rqw"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="45"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlL-QU-Tcw" userLabel="Compass Button">
@@ -315,7 +314,7 @@
                                                     <constraint firstAttribute="height" constant="25" id="cJe-Mp-uVK"/>
                                                     <constraint firstAttribute="width" constant="25" id="tfx-J2-w7L"/>
                                                 </constraints>
-                                                <state key="normal" image="notification_off"/>
+                                                <state key="normal" image="notification_active"/>
                                                 <connections>
                                                     <action selector="changeFajrNotification" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNX-9z-pfo"/>
                                                 </connections>
@@ -642,7 +641,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-8H-HLT" userLabel="Quote View">
                                 <rect key="frame" x="0.0" y="558" width="600" height="42"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God being my helper" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-SW-GQh" userLabel="Quote">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call on Me; I will answer your" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-SW-GQh" userLabel="Quote">
                                         <rect key="frame" x="8" y="0.0" width="584" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="W8M-xn-kx2"/>
@@ -933,9 +932,10 @@
     </scenes>
     <resources>
         <image name="explore" width="24" height="24"/>
+        <image name="notification_active" width="24" height="24"/>
         <image name="notification_off" width="24" height="24"/>
         <image name="place" width="24" height="24"/>
         <image name="settings" width="24" height="24"/>
-        <image name="umalqura_logo" width="3000" height="3000"/>
+        <image name="umalqura_logo" width="2383" height="2380"/>
     </resources>
 </document>
