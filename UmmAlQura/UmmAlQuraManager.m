@@ -9,6 +9,7 @@ NSString *const kIsUsingCurrentLocation         = @"IS_USING_CURRENT_LOCATION";	
 NSString *const kCurrentLocationName            = @"CURRENT_LOCATION_NAME";
 NSString *const kCurrentLocationLatitude        = @"CURRENT_LOCATION_LATITUDE";
 NSString *const kCurrentLocationLongitude       = @"CURRENT_LOCATION_LONGITUDE";
+NSString *const kCurrentLocationTimeZone        = @"CURRENT_LOCATION_TIME_ZONE";
 NSString *const kIsDontAllwoLocationNotified    = @"IS_DONT_ALLWO_LOCATION_NOTIFIED";
 
 // Notification settings
@@ -45,6 +46,7 @@ NSString *const kImageActive    = @"notification_active";
         [self initSettings];
     } else {
         _currentLocationName = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentLocationName];
+        _currentLocationTimeZone = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentLocationTimeZone];
     }
     
 }

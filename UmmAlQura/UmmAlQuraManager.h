@@ -10,6 +10,7 @@ extern NSString *const kIsUsingCurrentLocation;	// Yes or No
 extern NSString *const kCurrentLocationName;
 extern NSString *const kCurrentLocationLatitude;
 extern NSString *const kCurrentLocationLongitude;
+extern NSString *const kCurrentLocationTimeZone;
 extern NSString *const kIsDontAllwoLocationNotified;
 
 // Notification settings
@@ -41,6 +42,7 @@ extern NSString *const kImageActive;
 
 // Location
 @property (strong, nonatomic) NSString *currentLocationName;
+@property (strong, nonatomic) NSNumber *currentLocationTimeZone;
 
 //// Functions
 + (UmmAlQuraManager*)sharedManager;

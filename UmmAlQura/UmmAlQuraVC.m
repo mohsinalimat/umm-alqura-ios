@@ -19,10 +19,8 @@
     [super viewDidLoad];
     _ummAlQuraManager   = [UmmAlQuraManager  sharedManager];
     _ummAlQuraUtilities = [[UmmAlQuraUtilities alloc] init];
-    
-    
-    
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
@@ -42,7 +40,6 @@
         _ummAlQuraManager.locationManager = [[CLLocationManager alloc] init];
         _ummAlQuraManager.locationManager.delegate = self;
         [_ummAlQuraManager.locationManager requestWhenInUseAuthorization];
-        
     } // else check if there is a selected city with it's coordnates
     
 }
@@ -67,7 +64,8 @@
     NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]
                                                      latitude:_ummAlQuraManager.locationManager.location.coordinate.latitude
                                                     longitude:_ummAlQuraManager.locationManager.location.coordinate.longitude
-                                                  andTimezone:[prayerTime getTimeZone]];
+                                                  andTimezone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]];
+    NSLog(@"time zone: %@", _ummAlQuraManager.currentLocationTimeZone);
     
     
     _eventFajrTitle.text    = NSLocalizedString(@"Event_Fajr", nil);
@@ -110,8 +108,13 @@
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
         CLPlacemark *placemark = [placemarks objectAtIndex:0];
         _currentLocation.text = placemark.locality;
-        [[NSUserDefaults standardUserDefaults] setObject:placemark.locality forKey:kCurrentLocationName];
+        _ummAlQuraManager.currentLocationTimeZone = [NSNumber numberWithDouble:placemark.timeZone.secondsFromGMT/3600.0f];
+        [[NSUserDefaults standardUserDefaults] setObject:_currentLocation.text forKey:kCurrentLocationName];
+        [[NSUserDefaults standardUserDefaults] setObject:_ummAlQuraManager.currentLocationTimeZone forKey:kCurrentLocationTimeZone];
         [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        // Setup the event after getting the new location
+        [self setupEvents];
     }];
 
 }
@@ -157,7 +160,6 @@
 }
 
 
-#pragma mark- Buttons
 - (void)setNotefcationStatus:(NSString *)status forEvent:(UIButton *)event {
     
     if ([status isEqualToString:kVibration]) {
@@ -176,6 +178,8 @@
 
 }
 
+
+#pragma mark- Buttons
 - (IBAction)changeFajrNotification {
     //exit(0);
     if (_eventFajrNotification.tag == 3) {
