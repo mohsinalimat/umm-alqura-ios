@@ -21,11 +21,7 @@ NSString* const kNotificationAsr		= @"NOTIFICATION_ASR";
 NSString* const kNotificationMaghrib	= @"NOTIFICATION_MAGHRIB";
 NSString* const kNotificationIsha		= @"NOTIFICATION_ISHA";
 
-// Date
-NSString *const kDayHijri       = @"DAY_HIJRI";
-NSString *const kMonthHijri     = @"MONTH_HIJRI";
-NSString *const kDayGregorian   = @"DAY_GREGORIAN";
-NSString *const kMonthGregorian = @"MONTH_GREGORIAN";
+
 
 + (UmmAlQuraManager*)sharedManager {
     static dispatch_once_t p = 0;
@@ -45,97 +41,69 @@ NSString *const kMonthGregorian = @"MONTH_GREGORIAN";
         [self initSettings];
     }
     
-    
 }
 
+
+// should be moved to controller
 - (NSDictionary *)retrieveLocationCoordinate {
     NSMutableDictionary *_coordinate = [[NSMutableDictionary alloc] init];
     
-    // TODO: we need to handle the user selction if atuorize or not
-    _locationManager = [[CLLocationManager alloc] init];
-    [_locationManager requestAlwaysAuthorization]; // we didn't select requestWhenInUseAuthorization bucuse if the user change location while the app close we still could notifie him
-    
-    
-    // to know it the user enable the locatin service
-    if ([_locationManager locationServicesEnabled]) {
-        NSLog(@"app locatin auth status: true");
-    } else {
-        NSLog(@"app locatin auth status: no");
-    }
-    
-    
-    _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
-    _locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
-    [_locationManager startUpdatingLocation];
-    
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:kIsUsingCurrentLocation] isEqualToString:kYes]) {
-        //get current location
-        CLGeocoder *geocoder = [[CLGeocoder alloc]init];
-        CLLocation *location = [[CLLocation alloc]initWithLatitude:_locationManager.location.coordinate.latitude longitude:_locationManager.location.coordinate.longitude];
-        
-        [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
-            
-            for (CLPlacemark *placemark in placemarks) {
-                NSLog(@"city: %@", [placemark locality]);
-            }
-            
-//            CLPlacemark *placemark = [placemarks objectAtIndex:0];
-//            //NSLog(@"placemark %@",placemark);
-//            //String to hold address
-//            //NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
-//            //NSLog(@"addressDictionary %@", placemark.addressDictionary);
+//    // TODO: we need to handle the user selction if atuorize or not
+//    _locationManager = [[CLLocationManager alloc] init];
+//    [_locationManager requestAlwaysAuthorization]; // we didn't select requestWhenInUseAuthorization bucuse if the user change location while the app close we still could notifie him
+//    
+//    
+//    // to know it the user enable the locatin service
+//    if ([_locationManager locationServicesEnabled]) {
+//        NSLog(@"app locatin auth status: true");
+//    } else {
+//        NSLog(@"app locatin auth status: no");
+//    }
+//    
+//    
+//    _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+//    _locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+//    [_locationManager startUpdatingLocation];
+//    
+//    if ([[[NSUserDefaults standardUserDefaults] objectForKey:kIsUsingCurrentLocation] isEqualToString:kYes]) {
+//        //get current location
+//        CLGeocoder *geocoder = [[CLGeocoder alloc]init];
+//        CLLocation *location = [[CLLocation alloc]initWithLatitude:_locationManager.location.coordinate.latitude longitude:_locationManager.location.coordinate.longitude];
+//        
+//        [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
 //            
-//            //NSLog(@"placemark %@",placemark.region);
-//            NSLog(@"placemark %@",placemark.country);  // Give Country Name
-//            NSLog(@"placemark %@",placemark.locality); // Extract the city name
-//            //NSLog(@"location %@",placemark.administrativeArea);
-//            //NSLog(@"location %@",placemark.ocean);
-//            //NSLog(@"location %@",placemark.postalCode);
-//            //NSLog(@"location %@",placemark.subLocality);
+//            for (CLPlacemark *placemark in placemarks) {
+//                NSLog(@"city: %@", [placemark locality]);
+//            }
 //            
-//            //NSLog(@"location %@",placemark.location);
-//            //Print the location to console
-//            //NSLog(@"I am currently at %@",locatedAt);
-            
-        }
-         ];
-        
-    }
+////            CLPlacemark *placemark = [placemarks objectAtIndex:0];
+////            //NSLog(@"placemark %@",placemark);
+////            //String to hold address
+////            //NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+////            //NSLog(@"addressDictionary %@", placemark.addressDictionary);
+////            
+////            //NSLog(@"placemark %@",placemark.region);
+////            NSLog(@"placemark %@",placemark.country);  // Give Country Name
+////            NSLog(@"placemark %@",placemark.locality); // Extract the city name
+////            //NSLog(@"location %@",placemark.administrativeArea);
+////            //NSLog(@"location %@",placemark.ocean);
+////            //NSLog(@"location %@",placemark.postalCode);
+////            //NSLog(@"location %@",placemark.subLocality);
+////            
+////            //NSLog(@"location %@",placemark.location);
+////            //Print the location to console
+////            //NSLog(@"I am currently at %@",locatedAt);
+//            
+//        }
+//         ];
+//        
+//    }
     
     return _coordinate;
 }
 
-- (NSDictionary *)retrieveCurrentDate {
-    NSMutableDictionary *_date = [[NSMutableDictionary alloc] init];
-    
-    // Gregorian
-    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *gregorianComponents = [gregorianCalendar components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
-    NSInteger gregorianDay = [gregorianComponents day];
-    NSInteger gregorianMonth = [gregorianComponents month];
-    [_date setObject:[NSString stringWithFormat:@"%ld", (long)gregorianDay] forKey:kDayGregorian];
-    [_date setObject:[NSString stringWithFormat:@"%ld", (long)gregorianMonth] forKey:kMonthGregorian];
-    
-    // Hijri
-    NSCalendar *hijriCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierIslamicUmmAlQura];
-    NSDateComponents *hijriComponents = [hijriCalendar components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear) fromDate:[NSDate date]];
-    NSInteger hijriDay = [hijriComponents day];
-    NSInteger hijriMonth = [hijriComponents month];
-    [_date setObject:[NSString stringWithFormat:@"%ld", (long)hijriDay] forKey:kDayHijri];
-    [_date setObject:[NSString stringWithFormat:@"%ld", (long)hijriMonth] forKey:kMonthHijri];
-    
-    return _date;
-}
-
-- (NSArray *)calculateEventsTimeForCoordinateLatitude:(double)latitude andLongitude:(double)longitude {
-    PrayTime *prayerTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
-                                               andCalculation:CalculationMethodMakkah];
-    
-    NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]
-                                                     latitude:latitude
-                                                    longitude:longitude
-                                                  andTimezone:[prayerTime getTimeZone]];
-    return prayerTimes;
+- (void)makkahMode {
+    // setup the app to makkah
 }
 
 - (void)initSettings {
@@ -143,8 +111,8 @@ NSString *const kMonthGregorian = @"MONTH_GREGORIAN";
     [[NSUserDefaults standardUserDefaults] setObject:kYes forKey:kIsUsingCurrentLocation];
     [[NSUserDefaults standardUserDefaults] setObject:[[NSLocale preferredLanguages] objectAtIndex:0] forKey:kAppLocale];
 //    [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"en-US", @"en-US", nil] forKey:@"AppleLanguages"];
-
     [[NSUserDefaults standardUserDefaults] synchronize];
+    [self makkahMode];
 }
 
 @end
