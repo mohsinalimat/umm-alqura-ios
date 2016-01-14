@@ -1,17 +1,73 @@
- /* 
-  Localizable.strings
-  UmmAlQura
-
-  Created by Khalid Alnuaim on 12/26/15.
-  Copyright © 2015 KACST. All rights reserved.
-*/
-
 // Events
-"Event_Fajr"        = "الفجر";
-"Event_Sunrise"     = "الشروق";
-"Event_Dhuhr"       = "الظهر";
-"Event_Asr"         = "العصر";
-"Event_Maghrib"     = "المغرب";
-"Event_Isha"        = "العشاء";
+"EVENT_FAJR"        = "الفجر";
+"EVENT_SUNRISE"     = "الشروق";
+"EVENT_DHUHR"       = "الظهر";
+"EVENT_ASR"         = "العصر";
+"EVENT_MAGHRIB"     = "المغرب";
+"EVENT_ISHA"        = "العشاء";
 
-// Months
+"NEXT_EVENT_SUB_TEXT" = "الوقت المتبقي على";
+
+"TIME_PM"   = "م";
+"TIME_AM"   = "ص";
+
+// Day
+"DAY_01" = "١";
+"DAY_02" = "٢";
+"DAY_03" = "٣";
+"DAY_04" = "٤";
+"DAY_05" = "٥";
+"DAY_06" = "٦";
+"DAY_07" = "٧";
+"DAY_08" = "٨";
+"DAY_09" = "٩";
+"DAY_10" = "١٠";
+"DAY_11" = "١١";
+"DAY_12" = "١٢";
+"DAY_13" = "١٣";
+"DAY_14" = "١٤";
+"DAY_15" = "١٥";
+"DAY_16" = "١٦";
+"DAY_17" = "١٧";
+"DAY_18" = "١٨";
+"DAY_19" = "١٩";
+"DAY_20" = "٢٠";
+"DAY_21" = "٢١";
+"DAY_22" = "٢٢";
+"DAY_23" = "٢٣";
+"DAY_24" = "٢٤";
+"DAY_25" = "٢٥";
+"DAY_26" = "٢٦";
+"DAY_27" = "٢٧";
+"DAY_28" = "٢٨";
+"DAY_29" = "٢٩";
+"DAY_30" = "٣٠";
+"DAY_31" = "٣١";
+
+// Months (Gregorian)
+"MONTH_GREGORIAN_JANUARY"   = "يناير (١)";
+"MONTH_GREGORIAN_FEBRUARY"  = "فبراير (٢)";
+"MONTH_GREGORIAN_MARCH"     = "مارس (٣)";
+"MONTH_GREGORIAN_APRIL"     = "أبريل (٤)";
+"MONTH_GREGORIAN_MAY"       = "مايو (٥)";
+"MONTH_GREGORIAN_JUNE"      = "يونيو (٦)";
+"MONTH_GREGORIAN_JULY"      = "يوليو (٧)";
+"MONTH_GREGORIAN_AUGUST"    = "أغسطس (٨)";
+"MONTH_GREGORIAN_SEPTEMBER" = "سبتمبر (٩)";
+"MONTH_GREGORIAN_OCTOBER"   = "أكتوبر (١٠)";
+"MONTH_GREGORIAN_NOVEMBER"  = "نوفمبر (١١)";
+"MONTH_GREGORIAN_DECEMBER"  = "ديسمبر (١٢)";
+
+// Months (Hijri)
+"MONTH_HIJRI_MUHARRAM"          = "محرم (١)";
+"MONTH_HIJRI_SAFAR"             = "صفر (٢)";
+"MONTH_HIJRI_RABI_ALAWWAL"      = "ربيع الأول (٣)";
+"MONTH_HIJRI_RABI_ALTHANI"      = "ربيع الثاني (٤)";
+"MONTH_HIJRI_JUMADA_ALAWWAL"    = "جماد الأولى (٥)";
+"MONTH_HIJRI_JUMAADA_ALAKHIR"   = "جماد الآخرة (٦)";
+"MONTH_HIJRI_RAJAB"             = "رجب (٧)";
+"MONTH_HIJRI_SHABAN"            = "شعبان (٨)";
+"MONTH_HIJRI_RAMADAN"           = "رمضان (٩)";
+"MONTH_HIJRI_SHAWWAL"           = "شوال (١٠)";
+"MONTH_HIJRI_DHU_ALQIDAH"       = "ذو القعدة (١١)";
+"MONTH_HIJRI_DHU_ALHIJJAH"      = "ذو الحجة (١٢)";

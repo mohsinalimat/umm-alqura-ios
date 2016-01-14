@@ -8,6 +8,7 @@
 @interface UmmAlQuraVC ()
 @property (strong, nonatomic) UmmAlQuraManager      *ummAlQuraManager;
 @property (strong, nonatomic) UmmAlQuraUtilities    *ummAlQuraUtilities;
+@property (strong, nonatomic) NSArray               *eventsTimeArray;
 @end
 
 @implementation UmmAlQuraVC
@@ -28,6 +29,7 @@
     [self setupDate];
 	[self setupEvents];
     [self setupNotification];
+    [self setupNextEvent];
 }
 
 
@@ -49,37 +51,42 @@
 	NSDictionary *_date = [_ummAlQuraUtilities retrieveCurrentDate];
 
     // Gregorian
-	_dayGregorian.text      = [_date objectForKey:kDayGregorian];
-	_monthGregorian.text    = [_date objectForKey:kMonthGregorian];
-	
-	// Hijri
-	_dayHijri.text      = [_date objectForKey:kDayHijri];
-	_monthHijri.text    = [_date objectForKey:kMonthHijri];
+    NSInteger dayGregorian      = [[_date objectForKey:kDayGregorian] integerValue];
+    NSInteger monthGregorian    = [[_date objectForKey:kMonthGregorian] integerValue];
+    _dayGregorian.text      = [_ummAlQuraUtilities localizeDay:dayGregorian];
+    _monthGregorian.text    = [_ummAlQuraUtilities localizeGregorianMonth:monthGregorian];
+
+    // Hijri
+    NSInteger dayHijri      = [[_date objectForKey:kDayHijri] integerValue];
+    NSInteger monthHijri    = [[_date objectForKey:kMonthHijri] integerValue];
+    _dayHijri.text      = [_ummAlQuraUtilities localizeDay:dayHijri];
+    _monthHijri.text    = [_ummAlQuraUtilities localizeHijriMonth:monthHijri];
 }
 
 
 - (void)setupEvents {
-    PrayTime *prayerTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
-                                               andCalculation:CalculationMethodMakkah];
-    NSMutableArray *prayerTimes = [prayerTime prayerTimesDate:[NSDate date]
-                                                     latitude:_ummAlQuraManager.locationManager.location.coordinate.latitude
-                                                    longitude:_ummAlQuraManager.locationManager.location.coordinate.longitude
-                                                  andTimezone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]];
-    NSLog(@"time zone: %@", _ummAlQuraManager.currentLocationTimeZone);
+    _eventsTimeArray = [[NSArray alloc] init];
+    _eventsTimeArray = [_ummAlQuraUtilities calculateEventsTimeForCoordinateLatitude:_ummAlQuraManager.locationManager.location.coordinate.latitude
+                                                                           longitude:_ummAlQuraManager.locationManager.location.coordinate.longitude
+                                                                                date:[NSDate date]
+                                                                            timeZone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]
+                                                                       andTimeFormat:TimeFormat12Hour];
+
+    // try catch
+    _eventFajrTitle.text    = NSLocalizedString(@"EVENT_FAJR", nil);
+    _eventFajrTime.text     = [_eventsTimeArray objectAtIndex:0];
+    _eventSunriseTitle.text = NSLocalizedString(@"EVENT_SUNRISE", nil);
+    _eventSunriseTime.text  = [_eventsTimeArray objectAtIndex:1];
+    _eventDhuhrTitle.text   = NSLocalizedString(@"EVENT_DHUHR", nil);
+    _eventDhuhrTime.text    = [_eventsTimeArray objectAtIndex:2];
+    _eventAsrTitle.text     = NSLocalizedString(@"EVENT_ASR", nil);
+    _eventAsrTime.text      = [_eventsTimeArray objectAtIndex:3];
+    _eventMaghribTitle.text = NSLocalizedString(@"EVENT_MAGHRIB", nil);
+    _eventMaghribTime.text  = [_eventsTimeArray objectAtIndex:4];
+    _eventIshaTitle.text    = NSLocalizedString(@"EVENT_ISHA", nil);
+    _eventIshaTime.text     = [_eventsTimeArray objectAtIndex:6];
     
-    
-    _eventFajrTitle.text    = NSLocalizedString(@"Event_Fajr", nil);
-    _eventFajrTime.text     = [prayerTimes objectAtIndex:0];
-    _eventSunriseTitle.text = NSLocalizedString(@"Event_Sunrise", nil);
-    _eventSunriseTime.text  = [prayerTimes objectAtIndex:1];
-    _eventDhuhrTitle.text   = NSLocalizedString(@"Event_Dhuhr", nil);
-    _eventDhuhrTime.text    = [prayerTimes objectAtIndex:2];
-    _eventAsrTitle.text     = NSLocalizedString(@"Event_Asr", nil);
-    _eventAsrTime.text      = [prayerTimes objectAtIndex:3];
-    _eventMaghribTitle.text = NSLocalizedString(@"Event_Maghrib", nil);
-    _eventMaghribTime.text  = [prayerTimes objectAtIndex:4];
-    _eventIshaTitle.text    = NSLocalizedString(@"Event_Isha", nil);
-    _eventIshaTime.text     = [prayerTimes objectAtIndex:6];
+    NSLog(@"events: %@", _eventsTimeArray);
 }
 
 
@@ -91,6 +98,18 @@
     [self setNotefcationStatus:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationMaghrib]    forEvent:_eventMaghribNotification];
     [self setNotefcationStatus:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationIsha]       forEvent:_eventIshaNotification];
 }
+
+
+- (void)setupNextEvent {
+    _currentEventSubtext.text = NSLocalizedString(@"NEXT_EVENT_SUB_TEXT", nil);
+    
+    NSDictionary *nextEvent = [_ummAlQuraUtilities calculateNextEventForCoordinateLatitude:_ummAlQuraManager.locationManager.location.coordinate.latitude
+                                                    andLongitude:_ummAlQuraManager.locationManager.location.coordinate.longitude
+                                                     andTimeZone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]];
+    NSInteger nextEventId = [[nextEvent objectForKey:kNextEventId] integerValue];
+    _currentEventName.text = [_ummAlQuraUtilities localizeNextEvent:nextEventId];
+}
+
 
 - (void)retrieveDeviceLocation {
     _ummAlQuraManager.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;

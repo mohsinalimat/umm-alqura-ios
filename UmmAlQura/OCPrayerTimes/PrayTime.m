@@ -668,10 +668,10 @@
 	double minutes = floor((time- hours)* 60);
 	NSString *suffix, *result=nil;
 	if(hours >= 12) {
-		suffix = @"pm";
+		suffix = NSLocalizedString(@"TIME_PM", nil);
 	}
 	else{
-		suffix = @"am";
+		suffix = NSLocalizedString(@"TIME_AM", nil);
 	}
 	//hours = ((((hours+ 12) -1) % (12))+ 1);
 	hours = (hours + 12) - 1;

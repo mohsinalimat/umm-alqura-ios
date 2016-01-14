@@ -44,6 +44,7 @@ extern NSString *const kImageActive;
 @property (strong, nonatomic) NSString *currentLocationName;
 @property (strong, nonatomic) NSNumber *currentLocationTimeZone;
 
+
 //// Functions
 + (UmmAlQuraManager*)sharedManager;
 - (void)setupApp;
