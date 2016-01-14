@@ -54,12 +54,21 @@ NSString *const kNextEventTime  = @"NEXT_EVENT_TIME";
     NSArray *_todayEvents = [self calculateEventsTimeForCoordinateLatitude:latitude longitude:longitude date:_todayDate timeZone:timezone andTimeFormat:TimeFormat24Hour];
     NSArray *_tomorrowEvents = [self calculateEventsTimeForCoordinateLatitude:latitude longitude:longitude date:_tomorrowDate timeZone:timezone andTimeFormat:TimeFormat24Hour];
     BOOL isNextEventTomorrow = YES;
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:timezone]];
+    
+    
+    //NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //[dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:timezone]];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSLog(@"timezone: %f", timezone);
+    NSInteger offset = timezone*3600;
+    NSLog(@"offset: %ld", (long)offset);
+    [calendar setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:offset]];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute fromDate:[NSDate date]];
+    
     NSDate *_eventTime;
     NSDate *_currentTime = [[NSDate alloc] init];
-    _currentTime = [NSDate date];
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    _currentTime = [calendar dateFromComponents:components];
     
     
     for (int i = 0; i < [_todayEvents count]; i++) {
@@ -67,8 +76,11 @@ NSString *const kNextEventTime  = @"NEXT_EVENT_TIME";
         NSInteger minute = [[[_todayEvents objectAtIndex:i] componentsSeparatedByString:@":"][1] integerValue];
         _eventTime = [[NSDate alloc] init];
         _eventTime = [calendar dateBySettingHour:hour minute:minute second:0 ofDate:[NSDate date] options:0];
-        NSComparisonResult result = [_eventTime compare:_currentTime];
         
+        NSLog(@"eventtime: %@", _eventTime);
+        NSLog(@"currenttime: %@", _currentTime);
+        
+        NSComparisonResult result = [_eventTime compare:_currentTime];
         switch (result) {
             case NSOrderedDescending:
                 [_nextEventDictionary setValue:[NSNumber numberWithInt:i] forKey:kNextEventId];
