@@ -9,6 +9,7 @@
 @property (strong, nonatomic) UmmAlQuraManager      *ummAlQuraManager;
 @property (strong, nonatomic) UmmAlQuraUtilities    *ummAlQuraUtilities;
 @property (strong, nonatomic) NSArray               *eventsTimeArray;
+@property NSInteger secondsToNextEvent;
 @end
 
 @implementation UmmAlQuraVC
@@ -18,8 +19,8 @@
 #pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _ummAlQuraManager   = [UmmAlQuraManager  sharedManager];
-    _ummAlQuraUtilities = [[UmmAlQuraUtilities alloc] init];
+    _ummAlQuraManager       = [UmmAlQuraManager  sharedManager];
+    _ummAlQuraUtilities     = [[UmmAlQuraUtilities alloc] init];
 }
 
 
@@ -85,8 +86,6 @@
     _eventMaghribTime.text  = [_eventsTimeArray objectAtIndex:4];
     _eventIshaTitle.text    = NSLocalizedString(@"EVENT_ISHA", nil);
     _eventIshaTime.text     = [_eventsTimeArray objectAtIndex:6];
-    
-    NSLog(@"events: %@", _eventsTimeArray);
 }
 
 
@@ -102,14 +101,49 @@
 
 - (void)setupNextEvent {
     _currentEventSubtext.text = NSLocalizedString(@"NEXT_EVENT_SUB_TEXT", nil);
-    
-    NSDictionary *nextEvent = [_ummAlQuraUtilities calculateNextEventForCoordinateLatitude:_ummAlQuraManager.locationManager.location.coordinate.latitude
-                                                    andLongitude:_ummAlQuraManager.locationManager.location.coordinate.longitude
-                                                     andTimeZone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]];
-    NSInteger nextEventId = [[nextEvent objectForKey:kNextEventId] integerValue];
-    _currentEventName.text = [_ummAlQuraUtilities localizeNextEvent:nextEventId];
+    [self retrieveNextEvent];
+    NSTimer *nextEventTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDownNextEvent) userInfo:nil repeats:YES];
 }
 
+- (void)retrieveNextEvent {
+    NSDictionary *nextEvent = [_ummAlQuraUtilities calculateNextEventForCoordinateLatitude:_ummAlQuraManager.locationManager.location.coordinate.latitude
+                                                                              andLongitude:_ummAlQuraManager.locationManager.location.coordinate.longitude
+                                                                               andTimeZone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]];
+    NSInteger nextEventId = [[nextEvent objectForKey:kNextEventId] integerValue];
+    _currentEventName.text = [_ummAlQuraUtilities localizeNextEvent:nextEventId];
+    _secondsToNextEvent = 0;
+    
+    if ([[nextEvent objectForKey:kNextEventIsToday] isEqualToString:kYes]) {
+        _secondsToNextEvent = [_ummAlQuraUtilities calculateSecondsLeftToNextEventOnHour:[[nextEvent objectForKey:kNextEventHour] integerValue]
+                                                                                  minute:[[nextEvent objectForKey:kNextEventMinute] integerValue]
+                                                                                timeZone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]
+                                                                  andWithEventBeingToday:YES];
+    } else {
+        _secondsToNextEvent = [_ummAlQuraUtilities calculateSecondsLeftToNextEventOnHour:[[nextEvent objectForKey:kNextEventHour] integerValue]
+                                                                                  minute:[[nextEvent objectForKey:kNextEventMinute] integerValue]
+                                                                                timeZone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]
+                                                                  andWithEventBeingToday:NO];
+    }
+    
+}
+
+- (void)countDownNextEvent {
+    _secondsToNextEvent--;
+    
+    if (_secondsToNextEvent == 0) {
+        [self retrieveNextEvent];
+    } else {
+        [self updateNextEventTimerForRemainingSeconds];
+    }
+
+    NSLog(@"counting down: %ld", (long)_secondsToNextEvent);
+}
+
+- (void)updateNextEventTimerForRemainingSeconds {
+    NSArray *remainingTime = [_ummAlQuraUtilities retriveveNextEventRemainingTimeForSeconds:_secondsToNextEvent];
+    _currentEventTime.text = [NSString stringWithFormat:@"%@:%@:%@", [remainingTime objectAtIndex:0], [remainingTime objectAtIndex:1], [remainingTime objectAtIndex:2]];
+    NSLog(@"Remaining time dict: %@", remainingTime);
+}
 
 - (void)retrieveDeviceLocation {
     _ummAlQuraManager.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;

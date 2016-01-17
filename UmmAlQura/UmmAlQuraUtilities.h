@@ -10,13 +10,19 @@ extern NSString *const kMonthGregorian;
 
 extern NSString *const kNextEventId;
 extern NSString *const kNextEventTime;
+extern NSString *const kNextEventHour;
+extern NSString *const kNextEventMinute;
+extern NSString *const kNextEventIsToday;
 
 - (NSDictionary *)retrieveCurrentDate;
 - (NSArray *)calculateEventsTimeForCoordinateLatitude:(double)latitude longitude:(double)longitude date:(NSDate *)date timeZone:(double)timezone andTimeFormat:(TimeFormat)timeFormat;
 - (NSDictionary *)calculateNextEventForCoordinateLatitude:(double)latitude andLongitude:(double)longitude andTimeZone:(double)timezone;
+- (NSInteger)calculateSecondsLeftToNextEventOnHour:(NSInteger)hour minute:(NSInteger)minute timeZone:(double)timezone andWithEventBeingToday:(BOOL)isEventToday;
+- (NSArray *)retriveveNextEventRemainingTimeForSeconds:(NSInteger)totalSeconds;
 
 - (NSString *)localizeNextEvent:(NSInteger)event;
 - (NSString *)localizeDay:(NSInteger)day;
 - (NSString *)localizeGregorianMonth:(NSInteger)month;
 - (NSString *)localizeHijriMonth:(NSInteger)month;
+- (NSString *)localizeTwoDigitsNumber:(NSInteger)number;
 @end
