@@ -14,6 +14,7 @@
 		266A01FA1C2C8CDB00236507 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 266A01F91C2C8CDB00236507 /* AppConstants.m */; };
 		FA5D6B151C026C24006CD077 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D6B141C026C24006CD077 /* TestVC.m */; };
 		FA77306E1C43DB3900C7BEF7 /* UmmAlQuraUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77306D1C43DB3900C7BEF7 /* UmmAlQuraUtilities.m */; };
+		FA7730711C4CCCB500C7BEF7 /* QiblahVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7730701C4CCCB500C7BEF7 /* QiblahVC.m */; };
 		FAA61CFF1BF921A0001C450E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61CFE1BF921A0001C450E /* main.m */; };
 		FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D011BF921A0001C450E /* AppDelegate.m */; };
 		FAA61D051BF921A0001C450E /* UmmAlQuraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D041BF921A0001C450E /* UmmAlQuraVC.m */; };
@@ -55,6 +56,8 @@
 		FA5D6B141C026C24006CD077 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		FA77306C1C43DB3900C7BEF7 /* UmmAlQuraUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UmmAlQuraUtilities.h; sourceTree = "<group>"; };
 		FA77306D1C43DB3900C7BEF7 /* UmmAlQuraUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UmmAlQuraUtilities.m; sourceTree = "<group>"; };
+		FA77306F1C4CCCB500C7BEF7 /* QiblahVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiblahVC.h; sourceTree = "<group>"; };
+		FA7730701C4CCCB500C7BEF7 /* QiblahVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiblahVC.m; sourceTree = "<group>"; };
 		FAA61CFA1BF921A0001C450E /* UmmAlQura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmmAlQura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA61CFE1BF921A0001C450E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAA61D001BF921A0001C450E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				FAA61D041BF921A0001C450E /* UmmAlQuraVC.m */,
 				FA5D6B131C026C24006CD077 /* TestVC.h */,
 				FA5D6B141C026C24006CD077 /* TestVC.m */,
+				FA77306F1C4CCCB500C7BEF7 /* QiblahVC.h */,
+				FA7730701C4CCCB500C7BEF7 /* QiblahVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				266A01FA1C2C8CDB00236507 /* AppConstants.m in Sources */,
 				FA5D6B151C026C24006CD077 /* TestVC.m in Sources */,
 				260153461C2F06BE0035E758 /* PrayTime.m in Sources */,
+				FA7730711C4CCCB500C7BEF7 /* QiblahVC.m in Sources */,
 				FAA61D051BF921A0001C450E /* UmmAlQuraVC.m in Sources */,
 				2601535B1C31DBC40035E758 /* UmmAlQuraManager.m in Sources */,
 				FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */,

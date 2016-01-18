@@ -9,6 +9,7 @@
 @property (strong, nonatomic) UmmAlQuraManager      *ummAlQuraManager;
 @property (strong, nonatomic) UmmAlQuraUtilities    *ummAlQuraUtilities;
 @property (strong, nonatomic) NSArray               *eventsTimeArray;
+@property (strong, nonatomic) NSTimer               *nextEventTimer;
 @property NSInteger secondsToNextEvent;
 @end
 
@@ -102,7 +103,7 @@
 - (void)setupNextEvent {
     _currentEventSubtext.text = NSLocalizedString(@"NEXT_EVENT_SUB_TEXT", nil);
     [self retrieveNextEvent];
-    NSTimer *nextEventTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDownNextEvent) userInfo:nil repeats:YES];
+    _nextEventTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDownNextEvent) userInfo:nil repeats:YES];
 }
 
 - (void)retrieveNextEvent {

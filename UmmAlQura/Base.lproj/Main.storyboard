@@ -801,10 +801,10 @@
             </objects>
             <point key="canvasLocation" x="-720" y="-56.25"/>
         </scene>
-        <!--TestVC-->
+        <!--QiblahVC-->
         <scene sceneID="c86-qy-hey">
             <objects>
-                <viewController id="cGS-uk-VNo" customClass="TestVC" sceneMemberID="viewController">
+                <viewController id="cGS-uk-VNo" customClass="QiblahVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hC2-US-SNp"/>
                         <viewControllerLayoutGuide type="bottom" id="92R-QM-7fU"/>
@@ -813,26 +813,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="القبلة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDE-Dc-0QF">
-                                <rect key="frame" x="246" y="289" width="108" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="needle" translatesAutoresizingMaskIntoConstraints="NO" id="lqz-C1-MDA">
+                                <rect key="frame" x="275" y="150" width="50" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bnx-Bw-DpU"/>
+                                    <constraint firstAttribute="height" constant="300" id="bwW-Vb-3m7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FDE-Dc-0QF" firstAttribute="centerX" secondItem="638-QI-d5R" secondAttribute="centerX" id="heN-43-Yge"/>
-                            <constraint firstItem="FDE-Dc-0QF" firstAttribute="centerY" secondItem="638-QI-d5R" secondAttribute="centerY" id="ne9-Nl-xvl"/>
+                            <constraint firstItem="lqz-C1-MDA" firstAttribute="centerY" secondItem="638-QI-d5R" secondAttribute="centerY" id="7nR-jB-8RL"/>
+                            <constraint firstItem="lqz-C1-MDA" firstAttribute="centerX" secondItem="638-QI-d5R" secondAttribute="centerX" id="dAt-3c-kOg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Im8-Ta-RbE">
-                        <barButtonItem key="leftBarButtonItem" title="تم" id="JLl-7W-Cst">
+                        <barButtonItem key="leftBarButtonItem" image="arrow_down" id="JLl-7W-Cst">
                             <connections>
-                                <action selector="done:" destination="cGS-uk-VNo" id="tZO-q6-4Nb"/>
+                                <action selector="done" destination="cGS-uk-VNo" id="aj4-B1-kSA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="needle" destination="lqz-C1-MDA" id="6kr-xb-v29"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mo-Cw-7kt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -931,7 +935,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow_down" width="48" height="48"/>
         <image name="explore" width="24" height="24"/>
+        <image name="needle" width="39" height="316"/>
         <image name="notification_active" width="24" height="24"/>
         <image name="notification_off" width="24" height="24"/>
         <image name="place" width="24" height="24"/>

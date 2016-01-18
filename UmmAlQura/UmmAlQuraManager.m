@@ -71,4 +71,6 @@ NSString *const kImageActive    = @"notification_active";
     [self makkahMode];
 }
 
+// return if location is on or off
+
 @end
