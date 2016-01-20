@@ -152,7 +152,7 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
     [remainingTime addObject:[self localizeTwoDigitsNumber:minutes]];
     [remainingTime addObject:[self localizeTwoDigitsNumber:seconds]];
     
-    NSLog(@"time left --> %ld:%ld:%ld", (long)hours, (long)minutes, (long)seconds);
+    //NSLog(@"time left --> %ld:%ld:%ld", (long)hours, (long)minutes, (long)seconds);
     return remainingTime;
 }
 

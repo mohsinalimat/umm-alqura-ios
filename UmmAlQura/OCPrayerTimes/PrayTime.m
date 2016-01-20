@@ -339,7 +339,7 @@
 	[components setMonth:month]; // May
 	[components setYear:year];
 	NSCalendar *gregorian = [[NSCalendar alloc]
-							 initWithCalendarIdentifier:NSGregorianCalendar];
+							 initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	NSDate *date1 = [gregorian dateFromComponents:components];
 	
 	double ms = [date1 timeIntervalSince1970];// # of milliseconds since midnight Jan 1, 1970
@@ -461,7 +461,7 @@
 // return prayer times for the given date
 - (NSMutableArray *)prayerTimesDate:(NSDate *)date latitude:(double)latitude longitude:(double)longitude andTimezone:(double)timezone
 {
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitWeekOfMonth |  NSCalendarUnitDay;
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:unitFlags fromDate:date];
     

@@ -87,6 +87,12 @@
     _eventMaghribTime.text  = [_eventsTimeArray objectAtIndex:4];
     _eventIshaTitle.text    = NSLocalizedString(@"EVENT_ISHA", nil);
     _eventIshaTime.text     = [_eventsTimeArray objectAtIndex:6];
+    
+    NSLog(@"date: %@", [NSDate date]);
+    NSLog(@"timezone: %f", [_ummAlQuraManager.currentLocationTimeZone doubleValue]);
+    NSLog(@"Latitude: %f", _ummAlQuraManager.locationManager.location.coordinate.latitude);
+    NSLog(@"longitude: %f", _ummAlQuraManager.locationManager.location.coordinate.longitude);
+    NSLog(@"events: %@", _eventsTimeArray);
 }
 
 
@@ -137,13 +143,13 @@
         [self updateNextEventTimerForRemainingSeconds];
     }
 
-    NSLog(@"counting down: %ld", (long)_secondsToNextEvent);
+    //NSLog(@"counting down: %ld", (long)_secondsToNextEvent);
 }
 
 - (void)updateNextEventTimerForRemainingSeconds {
     NSArray *remainingTime = [_ummAlQuraUtilities retriveveNextEventRemainingTimeForSeconds:_secondsToNextEvent];
     _currentEventTime.text = [NSString stringWithFormat:@"%@:%@:%@", [remainingTime objectAtIndex:0], [remainingTime objectAtIndex:1], [remainingTime objectAtIndex:2]];
-    NSLog(@"Remaining time dict: %@", remainingTime);
+    //NSLog(@"Remaining time dict: %@", remainingTime);
 }
 
 - (void)retrieveDeviceLocation {
@@ -161,7 +167,9 @@
     
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
         CLPlacemark *placemark = [placemarks objectAtIndex:0];
-        _currentLocation.text = placemark.locality;
+        
+        // we should check the location here if there is no text show the coordinat
+        _currentLocation.text = [NSString stringWithFormat:@"%@, %@, %@", placemark.name, placemark.locality, placemark.country];
         _ummAlQuraManager.currentLocationTimeZone = [NSNumber numberWithDouble:placemark.timeZone.secondsFromGMT/3600.0f];
         [[NSUserDefaults standardUserDefaults] setObject:_currentLocation.text forKey:kCurrentLocationName];
         [[NSUserDefaults standardUserDefaults] setObject:_ummAlQuraManager.currentLocationTimeZone forKey:kCurrentLocationTimeZone];
