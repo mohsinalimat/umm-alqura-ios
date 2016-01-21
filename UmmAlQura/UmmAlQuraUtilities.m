@@ -17,6 +17,7 @@ NSString *const kNextEventMinute    = @"NEXT_EVENT_MINUTE";
 NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
 
 
+
 - (NSDictionary *)retrieveCurrentDate {
     NSMutableDictionary *date = [[NSMutableDictionary alloc] init];
     
@@ -41,12 +42,17 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
     return date;
 }
 
-- (NSArray *)calculateEventsTimeForCoordinateLatitude:(double)latitude longitude:(double)longitude date:(NSDate *)date timeZone:(double)timezone andTimeFormat:(TimeFormat)timeFormat {
-    PrayTime *prayerTime = [[PrayTime alloc] initWithJuristic:JuristicMethodShafii
-                                               andCalculation:CalculationMethodMakkah];
-    [prayerTime setTimeFormat:timeFormat];
+- (NSArray *)calculateEventsTimeForCoordinateLatitude:(double)latitude longitude:(double)longitude date:(NSDate *)date timeZone:(double)timezone andTimeFormat:(NSInteger)timeFormat {
+    _prayTime = [[PrayTime alloc] init];
     
-    NSArray *prayerTimes = [prayerTime prayerTimesDate:date latitude:latitude longitude:longitude andTimezone:timezone];
+    NSDateComponents *dateComponents = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
+                                                                                                                        fromDate:date];
+    
+    [_prayTime setCalcMethod:(int)_prayTime.Makkah];
+    [_prayTime setTimeFormat:(int)timeFormat];
+    
+    NSMutableArray *prayerTimes = [_prayTime getPrayerTimes:dateComponents andLatitude:latitude andLongitude:longitude andtimeZone:timezone];
+    [prayerTimes removeObjectAtIndex:5]; // removing sunset
     return prayerTimes;
 }
 
@@ -56,8 +62,8 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
     [dateComponents setDay:1];
     NSDate *todayDate = [NSDate date];
     NSDate *tomorrowDate = [[NSCalendar currentCalendar] dateByAddingComponents:dateComponents toDate:[NSDate date] options:0];
-    NSArray *todayEvents = [self calculateEventsTimeForCoordinateLatitude:latitude longitude:longitude date:todayDate timeZone:timezone andTimeFormat:TimeFormat24Hour];
-    NSArray *tomorrowEvents = [self calculateEventsTimeForCoordinateLatitude:latitude longitude:longitude date:tomorrowDate timeZone:timezone andTimeFormat:TimeFormat24Hour];
+    NSArray *todayEvents = [self calculateEventsTimeForCoordinateLatitude:latitude longitude:longitude date:todayDate timeZone:timezone andTimeFormat:_prayTime.Time24];
+    NSArray *tomorrowEvents = [self calculateEventsTimeForCoordinateLatitude:latitude longitude:longitude date:tomorrowDate timeZone:timezone andTimeFormat:_prayTime.Time24];
     BOOL isNextEventTomorrow = YES;
     float offset = timezone*3600;
     
@@ -70,9 +76,6 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
     currentTime = [calendar dateFromComponents:components];
     
     for (int i = 0; i < [todayEvents count]; i++) {
-        
-        // skip sunset
-        if (i == 5) { continue; }
         
         NSInteger hour = [[[todayEvents objectAtIndex:i] componentsSeparatedByString:@":"][0] integerValue];
         NSInteger minute = [[[todayEvents objectAtIndex:i] componentsSeparatedByString:@":"][1] integerValue];

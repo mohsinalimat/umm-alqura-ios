@@ -14,8 +14,10 @@ extern NSString *const kNextEventHour;
 extern NSString *const kNextEventMinute;
 extern NSString *const kNextEventIsToday;
 
+@property (strong, nonatomic) PrayTime *prayTime;
+
 - (NSDictionary *)retrieveCurrentDate;
-- (NSArray *)calculateEventsTimeForCoordinateLatitude:(double)latitude longitude:(double)longitude date:(NSDate *)date timeZone:(double)timezone andTimeFormat:(TimeFormat)timeFormat;
+- (NSArray *)calculateEventsTimeForCoordinateLatitude:(double)latitude longitude:(double)longitude date:(NSDate *)date timeZone:(double)timezone andTimeFormat:(NSInteger)timeFormat;
 - (NSDictionary *)calculateNextEventForCoordinateLatitude:(double)latitude andLongitude:(double)longitude andTimeZone:(double)timezone;
 - (NSInteger)calculateSecondsLeftToNextEventOnHour:(NSInteger)hour minute:(NSInteger)minute timeZone:(double)timezone andWithEventBeingToday:(BOOL)isEventToday;
 - (NSArray *)retriveveNextEventRemainingTimeForSeconds:(NSInteger)totalSeconds;

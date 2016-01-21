@@ -68,11 +68,12 @@
 
 - (void)setupEvents {
     _eventsTimeArray = [[NSArray alloc] init];
+
     _eventsTimeArray = [_ummAlQuraUtilities calculateEventsTimeForCoordinateLatitude:_ummAlQuraManager.locationManager.location.coordinate.latitude
                                                                            longitude:_ummAlQuraManager.locationManager.location.coordinate.longitude
                                                                                 date:[NSDate date]
                                                                             timeZone:[_ummAlQuraManager.currentLocationTimeZone doubleValue]
-                                                                       andTimeFormat:TimeFormat12Hour];
+                                                                       andTimeFormat:_ummAlQuraUtilities.prayTime.Time12];
 
     // try catch
     _eventFajrTitle.text    = NSLocalizedString(@"EVENT_FAJR", nil);
@@ -86,7 +87,7 @@
     _eventMaghribTitle.text = NSLocalizedString(@"EVENT_MAGHRIB", nil);
     _eventMaghribTime.text  = [_eventsTimeArray objectAtIndex:4];
     _eventIshaTitle.text    = NSLocalizedString(@"EVENT_ISHA", nil);
-    _eventIshaTime.text     = [_eventsTimeArray objectAtIndex:6];
+    _eventIshaTime.text     = [_eventsTimeArray objectAtIndex:5];
     
     NSLog(@"date: %@", [NSDate date]);
     NSLog(@"timezone: %f", [_ummAlQuraManager.currentLocationTimeZone doubleValue]);

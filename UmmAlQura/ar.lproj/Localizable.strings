@@ -11,6 +11,9 @@
 "TIME_PM"   = "م";
 "TIME_AM"   = "ص";
 
+"HIJRI_SUFFIX"      = "هـ";
+"GREGORIAN_SUFFIX"  = "م";
+
 // Day
 "DAY_01" = "١";
 "DAY_02" = "٢";

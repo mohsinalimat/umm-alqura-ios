@@ -1,0 +1,114 @@
+
+/* Class = "UILabel"; text = "14"; ObjectID = "2i8-bm-p9d"; */
+"2i8-bm-p9d.text" = "14";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "3AK-07-0Hz"; */
+"3AK-07-0Hz.text" = "--:--";
+
+/* Class = "UILabel"; text = "Fajr"; ObjectID = "3S1-Io-3rY"; */
+"3S1-Io-3rY.text" = "Fajr";
+
+/* Class = "UILabel"; text = "Fajr"; ObjectID = "46j-aU-nzQ"; */
+"46j-aU-nzQ.text" = "Fajr";
+
+/* Class = "UILabel"; text = "Call on Me; I will answer your"; ObjectID = "4yI-SW-GQh"; */
+"4yI-SW-GQh.text" = "Call on Me; I will answer your";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "5Gg-3o-0en"; */
+"5Gg-3o-0en.text" = "--:--";
+
+/* Class = "UILabel"; text = "Fajr"; ObjectID = "6jZ-5f-AFV"; */
+"6jZ-5f-AFV.text" = "Fajr";
+
+/* Class = "UILabel"; text = "Asr"; ObjectID = "7MZ-yn-pA5"; */
+"7MZ-yn-pA5.text" = "Asr";
+
+/* Class = "UILabel"; text = "22"; ObjectID = "7Nf-ZB-Q0c"; */
+"7Nf-ZB-Q0c.text" = "22";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "8pV-Xt-LXa"; */
+"8pV-Xt-LXa.text" = "-";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "9AG-ZS-ZVj"; */
+"9AG-ZS-ZVj.text" = "--:--";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "CMe-mc-96Y"; */
+"CMe-mc-96Y.text" = "--:--";
+
+/* Class = "UILabel"; text = "الإعدادات"; ObjectID = "Cw3-TS-ED1"; */
+"Cw3-TS-ED1.text" = "الإعدادات";
+
+/* Class = "UILabel"; text = "Maghrib"; ObjectID = "EMa-fs-be3"; */
+"EMa-fs-be3.text" = "Maghrib";
+
+/* Class = "UILabel"; text = "--:--:--"; ObjectID = "HH8-a5-TWW"; */
+"HH8-a5-TWW.text" = "--:--:--";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "HJG-aT-cJm"; */
+"HJG-aT-cJm.text" = "--:--";
+
+/* Class = "UILabel"; text = "Desamber (12)"; ObjectID = "HNw-Dz-bld"; */
+"HNw-Dz-bld.text" = "Desamber (12)";
+
+/* Class = "UILabel"; text = "Time left to"; ObjectID = "JKc-jj-ea3"; */
+"JKc-jj-ea3.text" = "Time left to";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "L1X-N3-jZc"; */
+"L1X-N3-jZc.text" = "--:--";
+
+/* Class = "UILabel"; text = "Asr"; ObjectID = "Njy-mi-hCZ"; */
+"Njy-mi-hCZ.text" = "Asr";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "VLx-x4-dSK"; */
+"VLx-x4-dSK.text" = "--:--";
+
+/* Class = "UISegmentedControl"; Voe-SN-5pt.segmentTitles[0] = "Hijri"; ObjectID = "Voe-SN-5pt"; */
+"Voe-SN-5pt.segmentTitles[0]" = "هجري";
+
+/* Class = "UISegmentedControl"; Voe-SN-5pt.segmentTitles[1] = "Gregorian"; ObjectID = "Voe-SN-5pt"; */
+"Voe-SN-5pt.segmentTitles[1]" = "ميلادي";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "Z97-Kp-1RJ"; */
+"Z97-Kp-1RJ.text" = "--:--";
+
+/* Class = "UILabel"; text = "Dhuhr"; ObjectID = "aRU-Yo-ON4"; */
+"aRU-Yo-ON4.text" = "Dhuhr";
+
+/* Class = "UILabel"; text = "Isha"; ObjectID = "eGt-Td-2lD"; */
+"eGt-Td-2lD.text" = "Isha";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "ePj-pg-1eg"; */
+"ePj-pg-1eg.text" = "--:--";
+
+/* Class = "UILabel"; text = "Sunrise"; ObjectID = "gd7-eQ-SEb"; */
+"gd7-eQ-SEb.text" = "Sunrise";
+
+/* Class = "UILabel"; text = "Maghrib"; ObjectID = "hh5-Dk-ZRu"; */
+"hh5-Dk-ZRu.text" = "Maghrib";
+
+/* Class = "UILabel"; text = "Isha"; ObjectID = "isI-zt-WHs"; */
+"isI-zt-WHs.text" = "Isha";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "pyR-B3-tcY"; */
+"pyR-B3-tcY.text" = "--:--";
+
+/* Class = "UILabel"; text = "17 Septmber 2001"; ObjectID = "q9p-QH-mAD"; */
+"q9p-QH-mAD.text" = "17 Septmber 2001";
+
+/* Class = "UILabel"; text = "safer (2)"; ObjectID = "sZb-kZ-93G"; */
+"sZb-kZ-93G.text" = "safer (2)";
+
+/* Class = "UILabel"; text = "إختيار المدينة"; ObjectID = "t4E-zt-dIy"; */
+"t4E-zt-dIy.text" = "إختيار المدينة";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "ugB-zx-p86"; */
+"ugB-zx-p86.text" = "--:--";
+
+/* Class = "UILabel"; text = "--:--"; ObjectID = "w1b-yv-vXV"; */
+"w1b-yv-vXV.text" = "--:--";
+
+/* Class = "UILabel"; text = "Sunrise"; ObjectID = "x2E-SJ-BuA"; */
+"x2E-SJ-BuA.text" = "Sunrise";
+
+/* Class = "UILabel"; text = "Dhuhr"; ObjectID = "xXE-oP-ki3"; */
+"xXE-oP-ki3.text" = "Dhuhr";
