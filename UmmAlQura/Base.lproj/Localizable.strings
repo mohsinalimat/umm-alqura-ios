@@ -137,3 +137,6 @@
 "TWO_DIGITS_57" = "57";
 "TWO_DIGITS_58" = "58";
 "TWO_DIGITS_59" = "59";
+
+// Location Settings
+"AUTO_DETECT_LOCATION" = "Auto detect location";

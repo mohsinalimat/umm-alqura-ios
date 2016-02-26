@@ -1146,10 +1146,10 @@
             </objects>
             <point key="canvasLocation" x="-1657" y="256"/>
         </scene>
-        <!--TestVC-->
+        <!--Location SettingsVC-->
         <scene sceneID="Svy-pb-ycK">
             <objects>
-                <viewController id="zY3-iq-ayv" customClass="TestVC" sceneMemberID="viewController">
+                <viewController id="zY3-iq-ayv" customClass="LocationSettingsVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b8c-R1-uZ4"/>
                         <viewControllerLayoutGuide type="bottom" id="Rrg-rp-FEA"/>
@@ -1158,30 +1158,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="إختيار المدينة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4E-zt-dIy">
-                                <rect key="frame" x="251" y="289" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9jA-AO-Gdv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zY3-iq-ayv" id="Nsg-ng-tbe"/>
+                                    <outlet property="delegate" destination="zY3-iq-ayv" id="OqD-5i-OQq"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="t4E-zt-dIy" firstAttribute="centerX" secondItem="cPI-6g-Jcz" secondAttribute="centerX" id="DNb-35-zd9"/>
-                            <constraint firstItem="t4E-zt-dIy" firstAttribute="centerY" secondItem="cPI-6g-Jcz" secondAttribute="centerY" id="pmV-84-cPd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9jA-AO-Gdv" secondAttribute="trailing" constant="-20" id="M9d-wT-h9w"/>
+                            <constraint firstItem="9jA-AO-Gdv" firstAttribute="centerX" secondItem="cPI-6g-Jcz" secondAttribute="centerX" id="O5t-f1-5Qz"/>
+                            <constraint firstItem="9jA-AO-Gdv" firstAttribute="centerY" secondItem="cPI-6g-Jcz" secondAttribute="centerY" id="REL-bs-Ern"/>
+                            <constraint firstItem="Rrg-rp-FEA" firstAttribute="top" secondItem="9jA-AO-Gdv" secondAttribute="bottom" id="RMH-B2-kfG"/>
+                            <constraint firstItem="9jA-AO-Gdv" firstAttribute="top" secondItem="cPI-6g-Jcz" secondAttribute="topMargin" id="TVS-Gl-NO1"/>
+                            <constraint firstItem="9jA-AO-Gdv" firstAttribute="leading" secondItem="cPI-6g-Jcz" secondAttribute="leadingMargin" constant="-20" id="hhi-9S-RHi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jdE-xs-9Aj">
                         <barButtonItem key="leftBarButtonItem" image="arrow_down" id="VNi-5A-zoe">
                             <connections>
-                                <action selector="done:" destination="zY3-iq-ayv" id="MV4-ko-AbS"/>
+                                <action selector="done" destination="zY3-iq-ayv" id="STp-8l-5iq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9jA-AO-Gdv" id="eYM-Qa-QI2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIs-RB-F2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="171" y="-56.25"/>
+            <point key="canvasLocation" x="171" y="-57"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WJx-my-2d8">
