@@ -16,22 +16,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbD-Ed-dL0">
-                        <rect key="frame" x="18" y="0.0" width="234" height="43"/>
+                        <rect key="frame" x="20" y="0.0" width="222" height="43"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ArQ-Mj-vzN">
-                        <rect key="frame" x="260" y="6" width="51" height="31"/>
+                        <rect key="frame" x="250" y="6" width="51" height="31"/>
                     </switch>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fbD-Ed-dL0" firstAttribute="top" secondItem="kOt-1U-WWq" secondAttribute="top" id="1kk-aw-cBP"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ArQ-Mj-vzN" secondAttribute="trailing" constant="3" id="32X-bI-qaA"/>
-                    <constraint firstItem="ArQ-Mj-vzN" firstAttribute="leading" secondItem="fbD-Ed-dL0" secondAttribute="trailing" constant="8" symbolic="YES" id="KZS-Vg-az4"/>
-                    <constraint firstItem="fbD-Ed-dL0" firstAttribute="leading" secondItem="kOt-1U-WWq" secondAttribute="leadingMargin" constant="10" id="LpF-JP-LNL"/>
-                    <constraint firstAttribute="bottom" secondItem="fbD-Ed-dL0" secondAttribute="bottom" id="eM1-9E-u7A"/>
-                    <constraint firstItem="ArQ-Mj-vzN" firstAttribute="centerY" secondItem="fbD-Ed-dL0" secondAttribute="centerY" id="u0q-Nx-odi"/>
+                    <constraint firstAttribute="bottom" secondItem="fbD-Ed-dL0" secondAttribute="bottom" id="0jO-K1-6c1"/>
+                    <constraint firstItem="fbD-Ed-dL0" firstAttribute="leading" secondItem="kOt-1U-WWq" secondAttribute="leadingMargin" constant="12" id="8dx-fF-GrF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ArQ-Mj-vzN" secondAttribute="trailing" constant="13" id="ToO-lD-dxW"/>
+                    <constraint firstItem="ArQ-Mj-vzN" firstAttribute="centerY" secondItem="fbD-Ed-dL0" secondAttribute="centerY" id="b1n-N1-9fL"/>
+                    <constraint firstItem="ArQ-Mj-vzN" firstAttribute="leading" secondItem="fbD-Ed-dL0" secondAttribute="trailing" constant="8" symbolic="YES" id="c7S-zf-fll"/>
+                    <constraint firstItem="fbD-Ed-dL0" firstAttribute="top" secondItem="kOt-1U-WWq" secondAttribute="top" id="rsP-JD-YB0"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

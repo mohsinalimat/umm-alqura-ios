@@ -34,7 +34,7 @@
         if (indexPath.section == 0 && indexPath.row == 0) {
             switchCell = [tableView dequeueReusableCellWithIdentifier:kSwitchCell forIndexPath:indexPath];
             switchCell.cLabel.text = NSLocalizedString(@"AUTO_DETECT_LOCATION", nil);
-            [switchCell.cSwitch addTarget:self action:@selector(statusChangedForAutoLocation) forControlEvents:UIControlEventValueChanged];
+            [switchCell.cSwitch addTarget:self action:@selector(statusChangedForAutoLocation:) forControlEvents:UIControlEventValueChanged];
             return switchCell;
         }
         
@@ -51,7 +51,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)statusChangedForAutoLocation {
-    NSLog(@"Status Changed");
+- (void)statusChangedForAutoLocation:(UISwitch *)cSwitch {
+    
+    if ([cSwitch isOn]) {
+        NSLog(@"On");
+    } else {
+        NSLog(@"Off");
+    }
+    
 }
 @end
