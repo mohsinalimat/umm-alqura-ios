@@ -182,6 +182,24 @@
 
 }
 
+- (void)setNotefcationStatus:(NSString *)status forEvent:(UIButton *)event {
+    
+    if ([status isEqualToString:kVibration]) {
+        [event setImage:[UIImage imageNamed:kImageVibration] forState:UIControlStateNormal];
+        [event setTag:2];
+    } else if ([status isEqualToString:kOff]) {
+        [event setImage:[UIImage imageNamed:kImageOff] forState:UIControlStateNormal];
+        [event setTag:1];
+    } else if ([status isEqualToString:kActive]) {
+        [event setImage:[UIImage imageNamed:kImageActive] forState:UIControlStateNormal];
+        [event setTag:3];
+    } else {
+        [event setImage:[UIImage imageNamed:kImageOff] forState:UIControlStateNormal];
+        [event setTag:1];
+    }
+    
+}
+
 
 #pragma mark- Location Manager (delegate)
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
@@ -223,23 +241,7 @@
 }
 
 
-- (void)setNotefcationStatus:(NSString *)status forEvent:(UIButton *)event {
-    
-    if ([status isEqualToString:kVibration]) {
-        [event setImage:[UIImage imageNamed:kImageVibration] forState:UIControlStateNormal];
-        [event setTag:2];
-    } else if ([status isEqualToString:kOff]) {
-        [event setImage:[UIImage imageNamed:kImageOff] forState:UIControlStateNormal];
-        [event setTag:1];
-    } else if ([status isEqualToString:kActive]) {
-        [event setImage:[UIImage imageNamed:kImageActive] forState:UIControlStateNormal];
-        [event setTag:3];
-    } else {
-        [event setImage:[UIImage imageNamed:kImageOff] forState:UIControlStateNormal];
-        [event setTag:1];
-    }
 
-}
 
 
 #pragma mark- Buttons
