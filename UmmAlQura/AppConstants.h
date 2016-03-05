@@ -8,4 +8,7 @@ extern NSString *const kVersionApp;
 extern NSString *const kVersionCurrent;
 
 extern NSString *const kAppLocale;
+
+// Cells
+extern NSString *const kSwitchCell;
 @end

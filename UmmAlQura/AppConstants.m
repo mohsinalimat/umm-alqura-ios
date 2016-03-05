@@ -9,4 +9,7 @@ NSString *const kVersionCurrent = @"CURRENT_VERSION";
 
 NSString *const kAppLocale = @"APP_LOCALE";
 
+// Cells
+NSString *const kSwitchCell = @"SwitchCell";
+
 @end

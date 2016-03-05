@@ -20,6 +20,8 @@
         _ummAlQuraManager.locationManager = [[CLLocationManager alloc] init];
         _ummAlQuraManager.locationManager.delegate = self;
         [_ummAlQuraManager.locationManager requestWhenInUseAuthorization];
+    } else {
+        // we should notiy the user to enable location
     }
     
     _geoPointCompass = [[GeoPointCompass alloc] init];
