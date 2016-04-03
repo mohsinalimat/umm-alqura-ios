@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -465,16 +465,6 @@
                                             <constraint firstAttribute="width" constant="90" id="enG-CR-JmG"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCD-PS-tbp" userLabel="Day Button">
-                                        <rect key="frame" x="255" y="0.0" width="90" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="Hf4-Q8-3eh"/>
-                                            <constraint firstAttribute="width" constant="90" id="YHM-ee-Iyl"/>
-                                        </constraints>
-                                        <connections>
-                                            <segue destination="55E-qE-cQt" kind="presentation" id="8Pj-mi-KLg"/>
-                                        </connections>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZ2-eX-Ghc" userLabel="Date Hijri View">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="90"/>
                                         <subviews>
@@ -549,28 +539,38 @@
                                             <constraint firstItem="2i8-bm-p9d" firstAttribute="top" secondItem="kli-gv-V8K" secondAttribute="top" constant="8" id="sgB-as-oCY"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCD-PS-tbp" userLabel="Day Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                        <connections>
+                                            <segue destination="55E-qE-cQt" kind="presentation" id="8Pj-mi-KLg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85490196080000003" green="1" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="dCD-PS-tbp" firstAttribute="centerX" secondItem="3Rc-YL-Iyz" secondAttribute="centerX" id="05P-YX-jKW"/>
+                                    <constraint firstItem="dCD-PS-tbp" firstAttribute="leading" secondItem="3Rc-YL-Iyz" secondAttribute="leading" id="2IT-Ul-SzG"/>
                                     <constraint firstItem="dCD-PS-tbp" firstAttribute="top" secondItem="3Rc-YL-Iyz" secondAttribute="top" id="6YX-b2-ygD"/>
                                     <constraint firstAttribute="bottom" secondItem="kli-gv-V8K" secondAttribute="bottom" id="7TP-Ex-zQ4"/>
+                                    <constraint firstItem="dCD-PS-tbp" firstAttribute="top" secondItem="3Rc-YL-Iyz" secondAttribute="top" id="8I9-lj-3wt"/>
                                     <constraint firstItem="I0l-rD-MNC" firstAttribute="top" secondItem="3Rc-YL-Iyz" secondAttribute="top" id="BAd-aX-4vK"/>
                                     <constraint firstAttribute="height" constant="90" id="EFm-pQ-BDy"/>
+                                    <constraint firstAttribute="bottom" secondItem="dCD-PS-tbp" secondAttribute="bottom" id="IaX-Et-VlR"/>
                                     <constraint firstAttribute="bottom" secondItem="mZ2-eX-Ghc" secondAttribute="bottom" id="J2y-UY-Nih"/>
                                     <constraint firstAttribute="bottom" secondItem="dCD-PS-tbp" secondAttribute="bottom" id="L90-PY-pFj"/>
-                                    <constraint firstItem="dCD-PS-tbp" firstAttribute="leading" secondItem="mZ2-eX-Ghc" secondAttribute="trailing" id="LH8-d4-GHM"/>
                                     <constraint firstItem="mZ2-eX-Ghc" firstAttribute="top" secondItem="3Rc-YL-Iyz" secondAttribute="top" id="Mcg-O3-Axj"/>
+                                    <constraint firstItem="I0l-rD-MNC" firstAttribute="leading" secondItem="mZ2-eX-Ghc" secondAttribute="trailing" id="MiG-Nu-tqs"/>
                                     <constraint firstItem="mZ2-eX-Ghc" firstAttribute="centerY" secondItem="3Rc-YL-Iyz" secondAttribute="centerY" id="Ns9-us-CJf"/>
-                                    <constraint firstItem="kli-gv-V8K" firstAttribute="leading" secondItem="dCD-PS-tbp" secondAttribute="trailing" id="Oz8-FU-39c"/>
                                     <constraint firstItem="dCD-PS-tbp" firstAttribute="centerY" secondItem="3Rc-YL-Iyz" secondAttribute="centerY" id="QKU-q2-CWo"/>
                                     <constraint firstItem="mZ2-eX-Ghc" firstAttribute="leading" secondItem="3Rc-YL-Iyz" secondAttribute="leading" id="SGs-vb-5PW"/>
                                     <constraint firstAttribute="bottom" secondItem="I0l-rD-MNC" secondAttribute="bottom" id="bAn-Pk-ehd"/>
                                     <constraint firstItem="kli-gv-V8K" firstAttribute="centerY" secondItem="3Rc-YL-Iyz" secondAttribute="centerY" id="iSS-15-OW0"/>
                                     <constraint firstAttribute="trailing" secondItem="kli-gv-V8K" secondAttribute="trailing" id="iri-7O-uBB"/>
+                                    <constraint firstItem="kli-gv-V8K" firstAttribute="leading" secondItem="I0l-rD-MNC" secondAttribute="trailing" id="ixl-bg-KWg"/>
                                     <constraint firstItem="I0l-rD-MNC" firstAttribute="centerY" secondItem="3Rc-YL-Iyz" secondAttribute="centerY" id="mdU-XU-ana"/>
                                     <constraint firstItem="I0l-rD-MNC" firstAttribute="centerX" secondItem="3Rc-YL-Iyz" secondAttribute="centerX" id="wLv-lx-NuR"/>
                                     <constraint firstItem="kli-gv-V8K" firstAttribute="top" secondItem="3Rc-YL-Iyz" secondAttribute="top" id="xFi-Uw-Jsb"/>
+                                    <constraint firstAttribute="trailing" secondItem="dCD-PS-tbp" secondAttribute="trailing" id="xmW-U7-0mf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xS6-u4-cQl" userLabel="Location View">
