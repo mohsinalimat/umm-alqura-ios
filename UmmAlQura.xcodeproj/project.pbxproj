@@ -11,6 +11,10 @@
 		260153521C2F0A6C0035E758 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 260153541C2F0A6C0035E758 /* Localizable.strings */; };
 		2601535B1C31DBC40035E758 /* UmmAlQuraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601535A1C31DBC40035E758 /* UmmAlQuraManager.m */; };
 		266A01FA1C2C8CDB00236507 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 266A01F91C2C8CDB00236507 /* AppConstants.m */; };
+		26DBCB6A1C8A7A9D00E7A325 /* GeoPointCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DBCB691C8A7A9D00E7A325 /* GeoPointCompass.m */; };
+		26DBCB6D1C8A7F1000E7A325 /* LocationSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DBCB6C1C8A7F1000E7A325 /* LocationSettingsVC.m */; };
+		26DBCB711C8B312D00E7A325 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DBCB701C8B312D00E7A325 /* SwitchCell.m */; };
+		26DBCB731C8B314C00E7A325 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DBCB721C8B314C00E7A325 /* SwitchCell.xib */; };
 		FA5D6B151C026C24006CD077 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D6B141C026C24006CD077 /* TestVC.m */; };
 		FA62C5FD1C4F9B30004DC048 /* DateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA62C5FC1C4F9B30004DC048 /* DateVC.m */; };
 		FA62C6151C4FD171004DC048 /* PrayTime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA62C6141C4FD171004DC048 /* PrayTime.m */; };
@@ -51,6 +55,13 @@
 		26425A651C3B032900549DB9 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		266A01F81C2C8CDB00236507 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
 		266A01F91C2C8CDB00236507 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		26DBCB681C8A7A9D00E7A325 /* GeoPointCompass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointCompass.h; sourceTree = "<group>"; };
+		26DBCB691C8A7A9D00E7A325 /* GeoPointCompass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointCompass.m; sourceTree = "<group>"; };
+		26DBCB6B1C8A7F1000E7A325 /* LocationSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSettingsVC.h; sourceTree = "<group>"; };
+		26DBCB6C1C8A7F1000E7A325 /* LocationSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSettingsVC.m; sourceTree = "<group>"; };
+		26DBCB6F1C8B312D00E7A325 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		26DBCB701C8B312D00E7A325 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		26DBCB721C8B314C00E7A325 /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
 		FA5D6B131C026C24006CD077 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		FA5D6B141C026C24006CD077 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		FA62C5FB1C4F9B30004DC048 /* DateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateVC.h; sourceTree = "<group>"; };
@@ -109,6 +120,7 @@
 		260153471C2F06DF0035E758 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				26DBCB671C8A7A9D00E7A325 /* GeoPointCompass */,
 				FA62C60C1C4FCAC8004DC048 /* PrayTimes */,
 			);
 			name = Libraries;
@@ -117,6 +129,7 @@
 		26425A621C3AF44700549DB9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26DBCB6E1C8A808200E7A325 /* Cells */,
 				FAA61D061BF921A0001C450E /* Main.storyboard */,
 				FAA61D0B1BF921A0001C450E /* LaunchScreen.storyboard */,
 			);
@@ -134,8 +147,29 @@
 				FA7730701C4CCCB500C7BEF7 /* QiblahVC.m */,
 				FA62C5FB1C4F9B30004DC048 /* DateVC.h */,
 				FA62C5FC1C4F9B30004DC048 /* DateVC.m */,
+				26DBCB6B1C8A7F1000E7A325 /* LocationSettingsVC.h */,
+				26DBCB6C1C8A7F1000E7A325 /* LocationSettingsVC.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		26DBCB671C8A7A9D00E7A325 /* GeoPointCompass */ = {
+			isa = PBXGroup;
+			children = (
+				26DBCB681C8A7A9D00E7A325 /* GeoPointCompass.h */,
+				26DBCB691C8A7A9D00E7A325 /* GeoPointCompass.m */,
+			);
+			path = GeoPointCompass;
+			sourceTree = "<group>";
+		};
+		26DBCB6E1C8A808200E7A325 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				26DBCB6F1C8B312D00E7A325 /* SwitchCell.h */,
+				26DBCB701C8B312D00E7A325 /* SwitchCell.m */,
+				26DBCB721C8B314C00E7A325 /* SwitchCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		FA62C60C1C4FCAC8004DC048 /* PrayTimes */ = {
@@ -328,6 +362,7 @@
 				260153521C2F0A6C0035E758 /* Localizable.strings in Resources */,
 				FAA61D0A1BF921A0001C450E /* Assets.xcassets in Resources */,
 				FAA61D081BF921A0001C450E /* Main.storyboard in Resources */,
+				26DBCB731C8B314C00E7A325 /* SwitchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,10 +391,13 @@
 				266A01FA1C2C8CDB00236507 /* AppConstants.m in Sources */,
 				FA5D6B151C026C24006CD077 /* TestVC.m in Sources */,
 				FA7730711C4CCCB500C7BEF7 /* QiblahVC.m in Sources */,
+				26DBCB711C8B312D00E7A325 /* SwitchCell.m in Sources */,
 				FAA61D051BF921A0001C450E /* UmmAlQuraVC.m in Sources */,
 				2601535B1C31DBC40035E758 /* UmmAlQuraManager.m in Sources */,
+				26DBCB6D1C8A7F1000E7A325 /* LocationSettingsVC.m in Sources */,
 				FA62C6151C4FD171004DC048 /* PrayTime.m in Sources */,
 				FAA61D021BF921A0001C450E /* AppDelegate.m in Sources */,
+				26DBCB6A1C8A7A9D00E7A325 /* GeoPointCompass.m in Sources */,
 				FA62C5FD1C4F9B30004DC048 /* DateVC.m in Sources */,
 				FAA61CFF1BF921A0001C450E /* main.m in Sources */,
 			);
