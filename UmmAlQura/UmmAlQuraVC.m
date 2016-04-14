@@ -22,7 +22,6 @@
     _ummAlQuraUtilities     = [[UmmAlQuraUtilities alloc] init];
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [self setupLocation];
@@ -45,7 +44,6 @@
     } // else check if there is a selected city with it's coordnates
     
 }
-
 
 - (void)setupDate {
 	NSDictionary *_date = [_ummAlQuraUtilities retrieveCurrentDate];
@@ -108,6 +106,10 @@
 - (void)setupNextEvent {
     _currentEventSubtext.text = NSLocalizedString(@"NEXT_EVENT_SUB_TEXT", nil);
     [self retrieveNextEvent];
+    
+    // Stop previous timer the update it to the new one
+    [_nextEventTimer invalidate];
+    _nextEventTimer = nil;
     _nextEventTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDownNextEvent) userInfo:nil repeats:YES];
 }
 
