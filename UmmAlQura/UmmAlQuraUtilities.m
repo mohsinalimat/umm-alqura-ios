@@ -121,7 +121,7 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
 - (NSInteger)calculateSecondsLeftToNextEventOnHour:(NSInteger)hour minute:(NSInteger)minute timeZone:(double)timezone andWithEventBeingToday:(BOOL)isEventToday {
     float offset = timezone*3600;
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute fromDate:[NSDate date]];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:[NSDate date]];
     [calendar setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:offset]];
     NSDate *currentTime = [[NSDate alloc] init];
     NSDate * eventTime = [[NSDate alloc] init];

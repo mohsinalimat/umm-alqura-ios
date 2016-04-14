@@ -28,6 +28,7 @@
 		FAA61D0D1BF921A0001C450E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA61D0B1BF921A0001C450E /* LaunchScreen.storyboard */; };
 		FAA61D181BF921A0001C450E /* UmmAlQuraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D171BF921A0001C450E /* UmmAlQuraTests.m */; };
 		FAA61D231BF921A0001C450E /* UmmAlQuraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA61D221BF921A0001C450E /* UmmAlQuraUITests.m */; };
+		FAC58FBF1CBFCCD0000A4298 /* LaunchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FBE1CBFCCD0000A4298 /* LaunchVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		FAA61D1E1BF921A0001C450E /* UmmAlQuraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmmAlQuraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA61D221BF921A0001C450E /* UmmAlQuraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UmmAlQuraUITests.m; sourceTree = "<group>"; };
 		FAA61D241BF921A0001C450E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC58FBD1CBFCCD0000A4298 /* LaunchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchVC.h; sourceTree = "<group>"; };
+		FAC58FBE1CBFCCD0000A4298 /* LaunchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 		26425A631C3AF46D00549DB9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FAC58FBD1CBFCCD0000A4298 /* LaunchVC.h */,
+				FAC58FBE1CBFCCD0000A4298 /* LaunchVC.m */,
 				FAA61D031BF921A0001C450E /* UmmAlQuraVC.h */,
 				FAA61D041BF921A0001C450E /* UmmAlQuraVC.m */,
 				FA5D6B131C026C24006CD077 /* TestVC.h */,
@@ -390,6 +395,7 @@
 				FA77306E1C43DB3900C7BEF7 /* UmmAlQuraUtilities.m in Sources */,
 				266A01FA1C2C8CDB00236507 /* AppConstants.m in Sources */,
 				FA5D6B151C026C24006CD077 /* TestVC.m in Sources */,
+				FAC58FBF1CBFCCD0000A4298 /* LaunchVC.m in Sources */,
 				FA7730711C4CCCB500C7BEF7 /* QiblahVC.m in Sources */,
 				26DBCB711C8B312D00E7A325 /* SwitchCell.m in Sources */,
 				FAA61D051BF921A0001C450E /* UmmAlQuraVC.m in Sources */,

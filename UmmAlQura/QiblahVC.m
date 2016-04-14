@@ -36,5 +36,12 @@
 }
 
 
+// TODO: implement the calibration method
+- (BOOL)locationManagerShouldDisplayHeadingCalibration:(CLLocationManager *)manager{
+    if(!manager.heading) return YES; // Got nothing, We can assume we got to calibrate.
+    else if(manager.heading.headingAccuracy < 0 ) return YES; // 0 means invalid heading, need to calibrate
+    else if(manager.heading.headingAccuracy > 5 ) return YES; // 5 degrees is a small value correct for my needs, too.
+    else return NO; // All is good. Compass is precise enough.
+}
 
 @end
