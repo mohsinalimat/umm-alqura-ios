@@ -443,23 +443,26 @@
             </objects>
             <point key="canvasLocation" x="171" y="-726"/>
         </scene>
-        <!--View Controller-->
+        <!--LaunchVC-->
         <scene sceneID="ISg-k3-yZw">
             <objects>
-                <viewController id="Z4K-UC-XCN" sceneMemberID="viewController">
+                <viewController id="Z4K-UC-XCN" customClass="LaunchVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ggd-RD-Lk4"/>
                         <viewControllerLayoutGuide type="bottom" id="744-9c-w5e"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2GZ-Ko-Rcp">
+                    <view key="view" contentMode="scaleToFill" id="2GZ-Ko-Rcp" userLabel="Container View">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toUmmAlQura" animates="NO" action="showDetailViewController:sender:" id="BVV-wM-qrv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6z-6y-YS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2352" y="256"/>
+            <point key="canvasLocation" x="-2338" y="256"/>
         </scene>
         <!--Umm Al QuraVC-->
         <scene sceneID="tne-QT-ifu">

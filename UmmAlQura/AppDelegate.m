@@ -16,8 +16,8 @@
     [[UINavigationBar appearance] setTintColor:[UIColor grayColor]];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor clearColor]];
     
-    _ummAlQuraManager = [UmmAlQuraManager sharedManager];
-    [_ummAlQuraManager setupApp];
+//    _ummAlQuraManager = [UmmAlQuraManager sharedManager];
+//    [_ummAlQuraManager setupApp];
 	return YES;
 }
 

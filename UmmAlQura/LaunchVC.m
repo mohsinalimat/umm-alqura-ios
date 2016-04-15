@@ -13,4 +13,10 @@
     [super viewDidLoad];
 
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    _ummAlQuraManager = [UmmAlQuraManager sharedManager];
+    [_ummAlQuraManager setupApp];
+    [self performSegueWithIdentifier:@"toUmmAlQura" sender:nil];
+}
 @end
