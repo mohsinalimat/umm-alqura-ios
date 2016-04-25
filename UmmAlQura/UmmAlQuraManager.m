@@ -73,4 +73,17 @@ NSString *const kImageActive    = @"notification_active";
 
 // return if location is on or off
 
+
+// the next function sould be run eveytime user update notofication for any priyres
+// or update sound type or in backround opining or when user clic on notivation
+- (void)scheduleNotifications {
+    _ummAlQuraUtilities = [[UmmAlQuraUtilities alloc] init];
+    // setup next prierses notification
+    // get priyers for next week based on wat user enable
+    
+    // remove all notification
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
+    // loop and add new notification based on sound
+}
 @end

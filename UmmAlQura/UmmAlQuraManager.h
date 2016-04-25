@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 #import <CoreLocation/CoreLocation.h>
+#import <UIKit/UIKit.h>
+#import "UmmAlQuraUtilities.h"
 
 @interface UmmAlQuraManager : NSObject
 
@@ -31,6 +33,7 @@ extern NSString *const kImageActive;
 
 //// Objs and Vars
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) UmmAlQuraUtilities *ummAlQuraUtilities;
 
 // Date Hijri
 @property (strong, nonatomic) NSString	*dayHijri;
@@ -48,4 +51,5 @@ extern NSString *const kImageActive;
 //// Functions
 + (UmmAlQuraManager*)sharedManager;
 - (void)setupApp;
+- (void)scheduleNotifications;
 @end

@@ -454,9 +454,20 @@
                     <view key="view" contentMode="scaleToFill" id="2GZ-Ko-Rcp" userLabel="Container View">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NrU-Lz-FC8">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NrU-Lz-FC8" firstAttribute="centerX" secondItem="2GZ-Ko-Rcp" secondAttribute="centerX" id="Eck-nD-cqH"/>
+                            <constraint firstItem="NrU-Lz-FC8" firstAttribute="centerY" secondItem="2GZ-Ko-Rcp" secondAttribute="centerY" id="kzz-IK-exJ"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="NrU-Lz-FC8" id="j44-s7-rcy"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toUmmAlQura" animates="NO" action="showDetailViewController:sender:" id="BVV-wM-qrv"/>
                     </connections>
                 </viewController>
