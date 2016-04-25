@@ -15,8 +15,22 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    _ummAlQuraManager = [UmmAlQuraManager sharedManager];
-    [_ummAlQuraManager setupApp];
-    [self performSegueWithIdentifier:@"toUmmAlQura" sender:nil];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_activityIndicator startAnimating];
+        });
+        
+        _ummAlQuraManager = [UmmAlQuraManager sharedManager];
+        [_ummAlQuraManager setupApp];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_activityIndicator stopAnimating];
+            [self performSegueWithIdentifier:@"toUmmAlQura" sender:nil];
+        });
+        
+        
+    });
+    
 }
 @end

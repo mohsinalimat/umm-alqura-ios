@@ -28,16 +28,16 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
     NSDateComponents *gregorianComponents = [gregorianCalendar components:(NSCalendarUnitDay | NSCalendarUnitMonth) fromDate:[NSDate date]];
     NSInteger gregorianDay = [gregorianComponents day];
     NSInteger gregorianMonth = [gregorianComponents month];
-    [date setObject:[NSString stringWithFormat:@"%ld", (long)gregorianDay] forKey:kDayGregorian];
-    [date setObject:[NSString stringWithFormat:@"%ld", (long)gregorianMonth] forKey:kMonthGregorian];
+    [date setObject:[NSString stringWithFormat:@"%ld", (long)gregorianDay]      forKey:kDayGregorian];
+    [date setObject:[NSString stringWithFormat:@"%ld", (long)gregorianMonth]    forKey:kMonthGregorian];
     
     // Hijri
     NSCalendar *hijriCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierIslamicUmmAlQura];
     NSDateComponents *hijriComponents = [hijriCalendar components:(NSCalendarUnitDay | NSCalendarUnitMonth) fromDate:[NSDate date]];
     NSInteger hijriDay = [hijriComponents day];
     NSInteger hijriMonth = [hijriComponents month];
-    [date setObject:[NSString stringWithFormat:@"%ld", (long)hijriDay] forKey:kDayHijri];
-    [date setObject:[NSString stringWithFormat:@"%ld", (long)hijriMonth] forKey:kMonthHijri];
+    [date setObject:[NSString stringWithFormat:@"%ld", (long)hijriDay]      forKey:kDayHijri];
+    [date setObject:[NSString stringWithFormat:@"%ld", (long)hijriMonth]    forKey:kMonthHijri];
     
     return date;
 }
@@ -53,6 +53,9 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
     
     NSMutableArray *prayerTimes = [_prayTime getPrayerTimes:dateComponents andLatitude:latitude andLongitude:longitude andtimeZone:timezone];
     [prayerTimes removeObjectAtIndex:5]; // removing sunset
+    
+    NSLog(@"this what return form the function for calculating the events: %@", prayerTimes);
+    
     return prayerTimes;
 }
 
@@ -157,6 +160,19 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
     
     //NSLog(@"time left --> %ld:%ld:%ld", (long)hours, (long)minutes, (long)seconds);
     return remainingTime;
+}
+
+- (void)scheduleNotificationAt:(NSDate *)fireDate timeZone:(double)timezone alertBody:(NSString *)alertBody andSoundName:(NSString *)soundName {
+    float offset = timezone*3600;
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = fireDate;
+    localNotification.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:offset];
+    localNotification.alertBody = alertBody;
+    localNotification.soundName = soundName;
+    localNotification.applicationIconBadgeNumber = 0;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 - (NSString *)localizeNextEvent:(NSInteger)event {

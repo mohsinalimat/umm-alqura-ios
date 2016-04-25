@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "PrayTime.h"
 @interface UmmAlQuraUtilities : NSObject
 
@@ -27,4 +28,7 @@ extern NSString *const kNextEventIsToday;
 - (NSString *)localizeGregorianMonth:(NSInteger)month;
 - (NSString *)localizeHijriMonth:(NSInteger)month;
 - (NSString *)localizeTwoDigitsNumber:(NSInteger)number;
+
+// function to add notofication for title, time and sound
+- (void)scheduleNotificationAt:(NSDate *)fireDate timeZone:(double)timezone alertBody:(NSString *)alertBody andSoundName:(NSString *)soundName;
 @end
