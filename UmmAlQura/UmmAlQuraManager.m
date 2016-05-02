@@ -78,12 +78,45 @@ NSString *const kImageActive    = @"notification_active";
 // or update sound type or in backround opining or when user clic on notivation
 - (void)scheduleNotifications {
     _ummAlQuraUtilities = [[UmmAlQuraUtilities alloc] init];
-    // setup next prierses notification
-    // get priyers for next week based on wat user enable
+    // setup next pryerses notification
+    // get priyers for next week based on what user are enabled
+    NSMutableArray *upcomingPrayers = [[NSMutableArray alloc] init];
+    
+    for (int day = 0; day < 7; day++) {
+        //get prayers for today + day and add it to upcomingPrayers
+        NSMutableDictionary *oneDayPrayersDictionary = [[NSMutableDictionary alloc] init];
+        NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+        [dateComponents setDay:day];
+        NSDate *date = [[NSCalendar currentCalendar] dateByAddingComponents:dateComponents toDate:[NSDate date] options:0];
+        NSArray *oneDayPrayersArray = [_ummAlQuraUtilities calculateEventsTimeForCoordinateLatitude:_locationManager.location.coordinate.latitude
+                                                                                     longitude:_locationManager.location.coordinate.longitude
+                                                                                          date:date
+                                                                                      timeZone:[_currentLocationTimeZone doubleValue]
+                                                                                 andTimeFormat:_ummAlQuraUtilities.prayTime.Time24];
+        // adding info to dict then adding it to array
+        [oneDayPrayersDictionary setObject:date forKey:@"Date"];
+        [oneDayPrayersDictionary setObject:[oneDayPrayersArray objectAtIndex:0] forKey:@"Fajr"];
+        [oneDayPrayersDictionary setObject:[oneDayPrayersArray objectAtIndex:1] forKey:@"Sunrise"];
+        [oneDayPrayersDictionary setObject:[oneDayPrayersArray objectAtIndex:2] forKey:@"Dhuhr"];
+        [oneDayPrayersDictionary setObject:[oneDayPrayersArray objectAtIndex:3] forKey:@"Asr"];
+        [oneDayPrayersDictionary setObject:[oneDayPrayersArray objectAtIndex:4] forKey:@"Maghrib"];
+        [oneDayPrayersDictionary setObject:[oneDayPrayersArray objectAtIndex:5] forKey:@"Isha"];
+        [upcomingPrayers addObject:oneDayPrayersDictionary];
+        
+    }
+    
+    NSLog(@"this is the upcommitng pryers: %@", upcomingPrayers);
+    
     
     // remove all notification
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
+    
     // loop and add new notification based on sound
+    // send info to adding funcation in utilities class
+    for (int i = 0; i < [upcomingPrayers count]; i++) {
+        
+    }
+    
 }
 @end
