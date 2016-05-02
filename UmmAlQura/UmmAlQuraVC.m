@@ -100,6 +100,10 @@
     [self setNotefcationStatus:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationAsr]        forEvent:_eventAsrNotification];
     [self setNotefcationStatus:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationMaghrib]    forEvent:_eventMaghribNotification];
     [self setNotefcationStatus:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationIsha]       forEvent:_eventIshaNotification];
+    
+    
+    // for testing
+    [_ummAlQuraManager scheduleNotifications];
 }
 
 
