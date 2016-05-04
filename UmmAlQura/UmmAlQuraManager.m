@@ -116,6 +116,44 @@ NSString *const kImageActive    = @"notification_active";
     // send info to adding funcation in utilities class
     for (int i = 0; i < [upcomingPrayers count]; i++) {
         
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationFajr] isEqualToString:kActive] ||
+            [[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationFajr] isEqualToString:kVibration]) {
+            [_ummAlQuraUtilities scheduleNotificationAt:[[upcomingPrayers objectAtIndex:i] objectForKey:@"date"]
+                                               timeZone:[_currentLocationTimeZone doubleValue]
+                                              alertBody:@"Time for fajr prayer"
+                                           andSoundName:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationFajr]];
+        } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationSunrise] isEqualToString:kActive] ||
+                   [[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationSunrise] isEqualToString:kVibration]) {
+            [_ummAlQuraUtilities scheduleNotificationAt:[[upcomingPrayers objectAtIndex:i] objectForKey:@"date"]
+                                               timeZone:[_currentLocationTimeZone doubleValue]
+                                              alertBody:@"Time for sunrise prayer"
+                                           andSoundName:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationSunrise]];
+        } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationDhuhr] isEqualToString:kActive] ||
+                   [[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationDhuhr] isEqualToString:kVibration]) {
+            [_ummAlQuraUtilities scheduleNotificationAt:[[upcomingPrayers objectAtIndex:i] objectForKey:@"date"]
+                                               timeZone:[_currentLocationTimeZone doubleValue]
+                                              alertBody:@"Time for dhuhr prayer"
+                                           andSoundName:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationDhuhr]];
+        } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationAsr] isEqualToString:kActive] ||
+                   [[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationAsr] isEqualToString:kVibration]) {
+            [_ummAlQuraUtilities scheduleNotificationAt:[[upcomingPrayers objectAtIndex:i] objectForKey:@"date"]
+                                               timeZone:[_currentLocationTimeZone doubleValue]
+                                              alertBody:@"Time for asr prayer"
+                                           andSoundName:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationAsr]];
+        } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationMaghrib] isEqualToString:kActive] ||
+                   [[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationMaghrib] isEqualToString:kVibration]) {
+            [_ummAlQuraUtilities scheduleNotificationAt:[[upcomingPrayers objectAtIndex:i] objectForKey:@"date"]
+                                               timeZone:[_currentLocationTimeZone doubleValue]
+                                              alertBody:@"Time for maghrib prayer"
+                                           andSoundName:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationMaghrib]];
+        } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationIsha] isEqualToString:kActive] ||
+                   [[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationIsha] isEqualToString:kVibration]) {
+            [_ummAlQuraUtilities scheduleNotificationAt:[[upcomingPrayers objectAtIndex:i] objectForKey:@"date"]
+                                               timeZone:[_currentLocationTimeZone doubleValue]
+                                              alertBody:@"Time for isha prayer"
+                                           andSoundName:[[NSUserDefaults standardUserDefaults] objectForKey:kNotificationIsha]];
+        }
+        
     }
     
 }
