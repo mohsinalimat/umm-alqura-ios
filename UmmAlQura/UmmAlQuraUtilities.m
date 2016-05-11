@@ -166,14 +166,14 @@ NSString *const kNextEventIsToday   = @"NEXT_EVENT_IS_TODAY";
     float offset = timezone*3600;
     NSLog(@"scheduleNotificationAt: %@, for: %@, sound: %@", fireDate, alertBody, soundName);
     
-    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = fireDate;
-    localNotification.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:offset];
-    localNotification.alertBody = alertBody;
-    localNotification.soundName = soundName;
-    localNotification.applicationIconBadgeNumber = 0;
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+//    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//    localNotification.fireDate = fireDate;
+//    localNotification.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:offset];
+//    localNotification.alertBody = alertBody;
+//    localNotification.soundName = soundName;
+//    localNotification.applicationIconBadgeNumber = 0;
+//    
+//    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 - (NSString *)localizeNextEvent:(NSInteger)event {
